@@ -1,718 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Growth System | Chicho’s Peruvian Charcoal Chicken</title>
-    <style>
-        /* DIRECT RESPONSE DESIGN SYSTEM - RESTAURANT THEME */
-        :root {
-            --bg-main: #ffffff;
-            --bg-alt: #fafaf9; /* Warm off-white */
-            --bg-dark: #1c1917; /* Charcoal */
-            --brand-primary: #ea580c; /* Fire orange */
-            --brand-primary-hover: #c2410c;
-            --text-dark: #1c1917;
-            --text-body: #44403c;
-            --text-muted: #78716c;
-            --border-color: #e7e5e4;
-            --highlight: #fef08a;
-            --red-alert: #dc2626;
-            --green-success: #16a34a;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Restaurant Growth System | Chicho’s Peruvian Charcoal Chicken</title>
+ <style>
+ /* DIRECT RESPONSE DESIGN SYSTEM - RESTAURANT THEME */
+ :root {
+ --bg-main: #ffffff;
+ --bg-alt: #fafaf9; /* Warm off-white */
+ --bg-dark: #1c1917; /* Charcoal */
+ --brand-primary: #ea580c; /* Fire orange */
+ --brand-primary-hover: #c2410c;
+ --text-dark: #1c1917;
+ --text-body: #44403c;
+ --text-muted: #78716c;
+ --border-color: #e7e5e4;
+ --highlight: #fef08a;
+ --red-alert: #dc2626;
+ --green-success: #16a34a;
+ --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--bg-alt);
-            color: var(--text-body);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+ body {
+ font-family: var(--font-sans);
+ background-color: var(--bg-alt);
+ color: var(--text-body);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .wrapper { background: var(--bg-main); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); margin: 0 auto 60px; }
-        
-        /* WARNING BAR */
-        .warning-bar { background-color: var(--bg-dark); color: white; text-align: center; padding: 12px 20px; font-size: 14px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
-        .warning-bar span { color: var(--brand-primary); }
+ .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+ .wrapper { background: var(--bg-main); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); margin: 0 auto 60px; }
+ 
+ /* WARNING BAR */
+ .warning-bar { background-color: var(--bg-dark); color: white; text-align: center; padding: 12px 20px; font-size: 14px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+ .warning-bar span { color: var(--brand-primary); }
 
-        /* TYPOGRAPHY */
-        .text-center { text-align: center; }
-        .highlight { background-color: var(--highlight); padding: 0 4px; color: var(--text-dark); }
-        .text-brand { color: var(--brand-primary); }
-        
-        h1, h2, h3, h4 { color: var(--text-dark); font-weight: 900; line-height: 1.2; }
-        .section-title { font-size: clamp(28px, 4vw, 36px); margin-bottom: 20px; letter-spacing: -0.5px; }
-        
-        /* HERO SECTION */
-        .hero { padding: 60px 30px 50px; border-bottom: 4px solid var(--border-color); background: var(--bg-main); text-align: center; }
-        .pre-headline { color: var(--brand-primary); font-weight: 800; font-size: 16px; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1.5px; }
-        .main-headline { font-size: clamp(32px, 5vw, 52px); margin-bottom: 30px; letter-spacing: -1px; }
-        .sub-headline { font-size: clamp(18px, 2.5vw, 22px); color: var(--text-body); font-weight: 500; margin-bottom: 40px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
-        
-        /* BUTTONS */
-        .cta-button { display: inline-block; width: 100%; max-width: 500px; background-color: var(--brand-primary); color: white; padding: 22px 20px; text-decoration: none; border-radius: 8px; box-shadow: 0 8px 0 var(--brand-primary-hover), 0 15px 20px rgba(234, 88, 12, 0.2); transition: all 0.1s; border: none; cursor: pointer; margin: 10px auto; text-align: center; }
-        .cta-button:active { transform: translateY(8px); box-shadow: 0 0 0 var(--brand-primary-hover); }
-        .cta-main-text { display: block; font-size: clamp(20px, 4vw, 26px); font-weight: 900; text-transform: uppercase; line-height: 1.2; }
-        .cta-sub-text { display: block; font-size: 14px; font-weight: 600; opacity: 0.9; margin-top: 6px; }
+ /* TYPOGRAPHY */
+ .text-center { text-align: center; }
+ .highlight { background-color: var(--highlight); padding: 0 4px; color: var(--text-dark); }
+ .text-brand { color: var(--brand-primary); }
+ 
+ h1, h2, h3, h4 { color: var(--text-dark); font-weight: 900; line-height: 1.2; }
+ .section-title { font-size: clamp(28px, 4vw, 36px); margin-bottom: 20px; letter-spacing: -0.5px; }
+ 
+ /* HERO SECTION */
+ .hero { padding: 60px 30px 50px; border-bottom: 4px solid var(--border-color); background: var(--bg-main); text-align: center; }
+ .pre-headline { color: var(--brand-primary); font-weight: 800; font-size: 16px; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1.5px; }
+ .main-headline { font-size: clamp(32px, 5vw, 52px); margin-bottom: 30px; letter-spacing: -1px; }
+ .sub-headline { font-size: clamp(18px, 2.5vw, 22px); color: var(--text-body); font-weight: 500; margin-bottom: 40px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
+ 
+ /* BUTTONS */
+ .cta-button { display: inline-block; width: 100%; max-width: 500px; background-color: var(--brand-primary); color: white; padding: 22px 20px; text-decoration: none; border-radius: 8px; box-shadow: 0 8px 0 var(--brand-primary-hover), 0 15px 20px rgba(234, 88, 12, 0.2); transition: all 0.1s; border: none; cursor: pointer; margin: 10px auto; text-align: center; }
+ .cta-button:active { transform: translateY(8px); box-shadow: 0 0 0 var(--brand-primary-hover); }
+ .cta-main-text { display: block; font-size: clamp(20px, 4vw, 26px); font-weight: 900; text-transform: uppercase; line-height: 1.2; }
+ .cta-sub-text { display: block; font-size: 14px; font-weight: 600; opacity: 0.9; margin-top: 6px; }
 
-        /* SECTIONS */
-        .section { padding: 60px 40px; border-bottom: 1px solid var(--border-color); }
-        .section.bg-alt { background-color: var(--bg-alt); }
-        .section.bg-dark { background-color: var(--bg-dark); color: white; }
-        .section.bg-dark h2, .section.bg-dark h3, .section.bg-dark h4 { color: white; }
-        @media (max-width: 600px) { .section { padding: 40px 20px; } }
+ /* SECTIONS */
+ .section { padding: 60px 40px; border-bottom: 1px solid var(--border-color); }
+ .section.bg-alt { background-color: var(--bg-alt); }
+ .section.bg-dark { background-color: var(--bg-dark); color: white; }
+ .section.bg-dark h2, .section.bg-dark h3, .section.bg-dark h4 { color: white; }
+ @media (max-width: 600px) { .section { padding: 40px 20px; } }
 
-        /* PROBLEM SECTION */
-        .problem-wrapper { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; align-items: center; }
-        @media (min-width: 850px) { .problem-wrapper { grid-template-columns: 1.2fr 0.8fr; } }
-        
-        .audit-findings { background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .audit-title { font-size: 20px; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; font-weight: 800; }
-        .audit-grid { display: grid; gap: 12px; }
-        .audit-card { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; }
-        .audit-icon { width: 20px; height: 20px; color: #6b7280; flex-shrink: 0; margin-top: 2px; }
-        .audit-text { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
-        .audit-text strong { display: block; color: var(--text-dark); font-size: 15px; margin-bottom: 4px; font-weight: 800; }
+ /* PROBLEM SECTION */
+ .problem-wrapper { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; align-items: center; }
+ @media (min-width: 850px) { .problem-wrapper { grid-template-columns: 1.2fr 0.8fr; } }
+ 
+ .audit-findings { background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+ .audit-title { font-size: 20px; color: var(--text-dark); border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; font-weight: 800; }
+ .audit-grid { display: grid; gap: 12px; }
+ .audit-card { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; }
+ .audit-icon { width: 20px; height: 20px; color: #6b7280; flex-shrink: 0; margin-top: 2px; }
+ .audit-text { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+ .audit-text strong { display: block; color: var(--text-dark); font-size: 15px; margin-bottom: 4px; font-weight: 800; }
 
-        /* MOCKUPS (NO IMAGES REQUIRED) */
-        .pos-mockup { background: #ffffff; border-radius: 12px; padding: 20px; color: var(--text-dark); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.02); border: 1px solid var(--border-color); font-family: -apple-system, sans-serif; position: relative; }
-        .pos-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
-        .pos-title { font-weight: 800; font-size: 16px; display: flex; align-items: center; gap: 8px; }
-        .pos-title svg { width: 20px; height: 20px; color: #ea580c; }
-        .pos-date { font-size: 12px; color: var(--text-muted); background: #f3f4f6; padding: 4px 8px; border-radius: 4px; font-weight: 600; }
-        
-        .pos-metrics { display: flex; gap: 15px; margin-bottom: 25px; }
-        .pos-metric { flex: 1; background: #f9fafb; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); }
-        .pos-metric span { display: block; font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
-        .pos-metric strong { display: block; font-size: 22px; font-weight: 900; color: var(--text-dark); }
-        
-        .pos-chart-container { height: 160px; display: flex; align-items: flex-end; gap: 10px; padding-top: 20px; border-bottom: 1px solid var(--border-color); position: relative; }
-        .pos-bar-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; position: relative; }
-        .pos-bar { background: #ea580c; width: 100%; border-radius: 4px 4px 0 0; transition: height 0.3s; }
-        .pos-bar.danger { background: var(--red-alert); opacity: 0.9; }
-        .pos-label { text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 8px; font-weight: 700; }
-        
-        .pos-alert { position: absolute; top: -30px; left: 18%; background: var(--red-alert); color: white; font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); z-index: 10; transform: translateX(-20%); white-space: nowrap; }
-        .pos-alert::after { content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); border-width: 5px 5px 0; border-style: solid; border-color: var(--red-alert) transparent transparent transparent; }
+ /* MOCKUPS (NO IMAGES REQUIRED) */
+ .pos-mockup { background: #ffffff; border-radius: 12px; padding: 20px; color: var(--text-dark); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.02); border: 1px solid var(--border-color); font-family: -apple-system, sans-serif; position: relative; }
+ .pos-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
+ .pos-title { font-weight: 800; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+ .pos-title svg { width: 20px; height: 20px; color: #ea580c; }
+ .pos-date { font-size: 12px; color: var(--text-muted); background: #f3f4f6; padding: 4px 8px; border-radius: 4px; font-weight: 600; }
+ 
+ .pos-metrics { display: flex; gap: 15px; margin-bottom: 25px; }
+ .pos-metric { flex: 1; background: #f9fafb; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); }
+ .pos-metric span { display: block; font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+ .pos-metric strong { display: block; font-size: 22px; font-weight: 900; color: var(--text-dark); }
+ 
+ .pos-chart-container { height: 160px; display: flex; align-items: flex-end; gap: 10px; padding-top: 20px; border-bottom: 1px solid var(--border-color); position: relative; }
+ .pos-bar-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; position: relative; }
+ .pos-bar { background: #ea580c; width: 100%; border-radius: 4px 4px 0 0; transition: height 0.3s; }
+ .pos-bar.danger { background: var(--red-alert); opacity: 0.9; }
+ .pos-label { text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 8px; font-weight: 700; }
+ 
+ .pos-alert { position: absolute; top: -30px; left: 18%; background: var(--red-alert); color: white; font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); z-index: 10; transform: translateX(-20%); white-space: nowrap; }
+ .pos-alert::after { content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); border-width: 5px 5px 0; border-style: solid; border-color: var(--red-alert) transparent transparent transparent; }
 
-        /* DASHBOARD MOCKUP */
-        .dash-mockup { background: #ffffff; border-radius: 12px; padding: 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border: 1px solid var(--border-color); overflow: hidden; margin-top: 20px; }
-        .dash-top { background: #f8fafc; padding: 12px 20px; border-bottom: 1px solid var(--border-color); display: flex; gap: 10px; align-items: center; }
-        .dash-dot { width: 12px; height: 12px; border-radius: 50%; background: #e2e8f0; }
-        .dash-dot.r { background: #ef4444; } .dash-dot.y { background: #f59e0b; } .dash-dot.g { background: #10b981; }
-        .dash-body { padding: 25px; }
-        .dash-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
-        .dash-stat { border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center; }
-        .dash-stat-title { font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
-        .dash-stat-val { font-size: 24px; font-weight: 900; color: #0f172a; }
-        .dash-stat-trend { font-size: 12px; font-weight: 700; color: #10b981; display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 4px; }
-        .dash-chart { height: 120px; border: 1px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 600; font-size: 14px; background: #f8fafc; }
+ /* DASHBOARD MOCKUP */
+ .dash-mockup { background: #ffffff; border-radius: 12px; padding: 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border: 1px solid var(--border-color); overflow: hidden; margin-top: 20px; }
+ .dash-top { background: #f8fafc; padding: 12px 20px; border-bottom: 1px solid var(--border-color); display: flex; gap: 10px; align-items: center; }
+ .dash-dot { width: 12px; height: 12px; border-radius: 50%; background: #e2e8f0; }
+ .dash-dot.r { background: #ef4444; } .dash-dot.y { background: #f59e0b; } .dash-dot.g { background: #10b981; }
+ .dash-body { padding: 25px; }
+ .dash-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
+ .dash-stat { border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center; }
+ .dash-stat-title { font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
+ .dash-stat-val { font-size: 24px; font-weight: 900; color: #0f172a; }
+ .dash-stat-trend { font-size: 12px; font-weight: 700; color: #10b981; display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 4px; }
+ .dash-chart { height: 120px; border: 1px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 600; font-size: 14px; background: #f8fafc; }
 
-        /* COMPARE GRID (Toast alone vs Toast + us) */
-        @media (min-width: 850px) { .compare-grid { grid-template-columns: 1fr 1fr !important; } }
+ /* COMPARE GRID (Toast alone vs Toast + us) */
+ @media (min-width: 850px) { .compare-grid { grid-template-columns: 1fr 1fr !important; } }
 
-        /* SOLUTION GRID */
-        .solution-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
-        @media (min-width: 768px) { .solution-grid { grid-template-columns: 1fr 1fr; } }
-        .sol-card { background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px; transition: border-color 0.2s; }
-        .sol-card:hover { border-color: var(--brand-primary); }
-        .sol-num { width: 40px; height: 40px; background: var(--brand-primary); color: white; font-size: 20px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 20px; }
-        .sol-card h3 { font-size: 20px; margin-bottom: 12px; }
-        .sol-card p { font-size: 15px; color: var(--text-muted); }
-        .sol-card ul { margin-top: 15px; padding-left: 20px; font-size: 14px; color: var(--text-body); }
-        .sol-card ul li { margin-bottom: 6px; }
+ /* SOLUTION GRID */
+ .solution-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
+ @media (min-width: 768px) { .solution-grid { grid-template-columns: 1fr 1fr; } }
+ .sol-card { background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px; transition: border-color 0.2s; }
+ .sol-card:hover { border-color: var(--brand-primary); }
+ .sol-num { width: 40px; height: 40px; background: var(--brand-primary); color: white; font-size: 20px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 20px; }
+ .sol-card h3 { font-size: 20px; margin-bottom: 12px; }
+ .sol-card p { font-size: 15px; color: var(--text-muted); }
+ .sol-card ul { margin-top: 15px; padding-left: 20px; font-size: 14px; color: var(--text-body); }
+ .sol-card ul li { margin-bottom: 6px; }
 
-        /* TIMELINE (DELIVERABLES & RESULTS) */
-        .timeline { margin-top: 40px; position: relative; padding-left: 20px; border-left: 3px solid var(--brand-primary); }
-        .t-item { position: relative; margin-bottom: 30px; }
-        .t-item:last-child { margin-bottom: 0; }
-        .t-item::before { content: ''; position: absolute; left: -29.5px; top: 4px; width: 16px; height: 16px; background: var(--brand-primary); border-radius: 50%; border: 4px solid var(--bg-main); }
-        .t-item h3 { font-size: 18px; margin-bottom: 8px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px; }
-        .t-item ul { list-style: none; }
-        .t-item li { margin-bottom: 6px; font-size: 15px; position: relative; padding-left: 20px; font-weight: 500; }
-        .t-item li::before { content: '→'; position: absolute; left: 0; color: var(--text-muted); }
+ /* TIMELINE (DELIVERABLES & RESULTS) */
+ .timeline { margin-top: 40px; position: relative; padding-left: 20px; border-left: 3px solid var(--brand-primary); }
+ .t-item { position: relative; margin-bottom: 30px; }
+ .t-item:last-child { margin-bottom: 0; }
+ .t-item::before { content: ''; position: absolute; left: -29.5px; top: 4px; width: 16px; height: 16px; background: var(--brand-primary); border-radius: 50%; border: 4px solid var(--bg-main); }
+ .t-item h3 { font-size: 18px; margin-bottom: 8px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px; }
+ .t-item ul { list-style: none; }
+ .t-item li { margin-bottom: 6px; font-size: 15px; position: relative; padding-left: 20px; font-weight: 500; }
+ .t-item li::before { content: '→'; position: absolute; left: 0; color: var(--text-muted); }
 
-        /* WHO THIS IS FOR */
-        .check-list { list-style: none; margin-top: 30px; display: grid; gap: 15px; }
-        @media (min-width: 600px) { .check-list { grid-template-columns: 1fr 1fr; } }
-        .check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; font-weight: 600; }
-        .check-list svg { width: 24px; height: 24px; color: var(--green-success); flex-shrink: 0; }
+ /* WHO THIS IS FOR */
+ .check-list { list-style: none; margin-top: 30px; display: grid; gap: 15px; }
+ @media (min-width: 600px) { .check-list { grid-template-columns: 1fr 1fr; } }
+ .check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; font-weight: 600; }
+ .check-list svg { width: 24px; height: 24px; color: var(--green-success); flex-shrink: 0; }
 
-        /* PRICING / OFFER */
-        .pricing-box { border: 4px solid var(--brand-primary); border-radius: 12px; padding: 40px; background: var(--bg-main); margin-top: 40px; }
-        .price-row { display: flex; flex-direction: column; gap: 30px; }
-        @media (min-width: 768px) { .price-row { flex-direction: row; } .price-col { flex: 1; } }
-        .price-title { font-size: 24px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
-        .price-val { font-size: 42px; font-weight: 900; color: var(--brand-primary); line-height: 1; margin-bottom: 5px; }
-        .price-sub { font-size: 14px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 20px; }
-        .price-col ul { list-style: none; }
-        .price-col li { position: relative; padding-left: 24px; margin-bottom: 10px; font-size: 15px; }
-        .price-col li::before { content: '✓'; position: absolute; left: 0; color: var(--green-success); font-weight: 900; font-size: 16px; }
+ /* PRICING / OFFER */
+ .pricing-box { border: 4px solid var(--brand-primary); border-radius: 12px; padding: 40px; background: var(--bg-main); margin-top: 40px; }
+ .price-row { display: flex; flex-direction: column; gap: 30px; }
+ @media (min-width: 768px) { .price-row { flex-direction: row; } .price-col { flex: 1; } }
+ .price-title { font-size: 24px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
+ .price-val { font-size: 42px; font-weight: 900; color: var(--brand-primary); line-height: 1; margin-bottom: 5px; }
+ .price-sub { font-size: 14px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 20px; }
+ .price-col ul { list-style: none; }
+ .price-col li { position: relative; padding-left: 24px; margin-bottom: 10px; font-size: 15px; }
+ .price-col li::before { content: '✓'; position: absolute; left: 0; color: var(--green-success); font-weight: 900; font-size: 16px; }
 
-        /* GUARANTEE */
-        .guarantee { background: #fffbeb; border: 2px solid #fde68a; border-radius: 12px; padding: 40px; text-align: center; margin-top: 40px; }
-        .guarantee-icon { width: 64px; height: 64px; color: #d97706; margin: 0 auto 20px; }
+ /* GUARANTEE */
+ .guarantee { background: #fffbeb; border: 2px solid #fde68a; border-radius: 12px; padding: 40px; text-align: center; margin-top: 40px; }
+ .guarantee-icon { width: 64px; height: 64px; color: #d97706; margin: 0 auto 20px; }
 
-        /* BONUS SECTION */
-        .bonus-box { background: #ffffff; border: 3px dashed #fbbf24; border-radius: 12px; padding: 40px 30px; position: relative; margin: 20px auto 40px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
-        .bonus-badge { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: #ea580c; color: white; padding: 6px 20px; font-weight: 900; font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 99px; box-shadow: 0 4px 6px rgba(234, 88, 12, 0.3); }
+ /* BONUS SECTION */
+ .bonus-box { background: #ffffff; border: 3px dashed #fbbf24; border-radius: 12px; padding: 40px 30px; position: relative; margin: 20px auto 40px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+ .bonus-badge { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: #ea580c; color: white; padding: 6px 20px; font-weight: 900; font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 99px; box-shadow: 0 4px 6px rgba(234, 88, 12, 0.3); }
 
-        /* FAQ */
-        .faq-item { border-bottom: 1px solid var(--border-color); padding: 20px 0; }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-q { font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; cursor: pointer; display: flex; gap: 10px; }
-        .faq-q::before { content: 'Q:'; color: var(--brand-primary); }
-        .faq-a { font-size: 16px; color: var(--text-body); padding-left: 30px; display: flex; gap: 10px; }
-        .faq-a::before { content: 'A:'; color: var(--text-muted); font-weight: 800; }
+ /* FAQ */
+ .faq-item { border-bottom: 1px solid var(--border-color); padding: 20px 0; }
+ .faq-item:last-child { border-bottom: none; }
+ .faq-q { font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; cursor: pointer; display: flex; gap: 10px; }
+ .faq-q::before { content: 'Q:'; color: var(--brand-primary); }
+ .faq-a { font-size: 16px; color: var(--text-body); padding-left: 30px; display: flex; gap: 10px; }
+ .faq-a::before { content: 'A:'; color: var(--text-muted); font-weight: 800; }
 
-        /* FORM */
-        .form-container { background: var(--bg-main); border-radius: 12px; padding: 40px; max-width: 600px; margin: 0 auto; color: var(--text-dark); text-align: left; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-weight: 800; margin-bottom: 8px; font-size: 14px; text-transform: uppercase; color: var(--text-muted); }
-        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px; font-family: inherit; background: var(--bg-alt); transition: border-color 0.2s; }
-        input:focus { outline: none; border-color: var(--brand-primary); background: var(--bg-main); }
-        
-        #success-state { display: none; text-align: center; padding: 40px 20px; }
-        #success-state svg { width: 80px; height: 80px; color: var(--green-success); margin-bottom: 20px; }
+ /* FORM */
+ .form-container { background: var(--bg-main); border-radius: 12px; padding: 40px; max-width: 600px; margin: 0 auto; color: var(--text-dark); text-align: left; }
+ .form-group { margin-bottom: 20px; }
+ label { display: block; font-weight: 800; margin-bottom: 8px; font-size: 14px; text-transform: uppercase; color: var(--text-muted); }
+ input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 16px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px; font-family: inherit; background: var(--bg-alt); transition: border-color 0.2s; }
+ input:focus { outline: none; border-color: var(--brand-primary); background: var(--bg-main); }
+ 
+ #success-state { display: none; text-align: center; padding: 40px 20px; }
+ #success-state svg { width: 80px; height: 80px; color: var(--green-success); margin-bottom: 20px; }
 
-        /* BOOKING FLOW */
-        .booking-step { margin-bottom: 30px; }
-        .booking-step h4 { font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
-        .day-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 18px; }
-        .day-btn { flex-shrink: 0; min-width: 84px; padding: 12px 10px; background: var(--bg-alt); border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; text-align: center; transition: all 0.15s; font-family: inherit; }
-        .day-btn:hover { border-color: var(--brand-primary); }
-        .day-btn.selected { background: var(--brand-primary); border-color: var(--brand-primary); color: white; }
-        .day-btn .dow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; }
-        .day-btn .dnum { display: block; font-size: 22px; font-weight: 900; line-height: 1.1; margin-top: 2px; }
-        .day-btn .dmon { display: block; font-size: 11px; font-weight: 600; opacity: 0.7; }
-        .slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
-        .slot-btn { padding: 12px 8px; background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--text-dark); transition: all 0.15s; font-family: inherit; }
-        .slot-btn:hover { border-color: var(--brand-primary); }
-        .slot-btn.selected { background: var(--brand-primary); border-color: var(--brand-primary); color: white; }
-        .slot-empty { color: var(--text-muted); font-size: 14px; font-style: italic; padding: 10px 0; }
-        .booking-summary { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; font-size: 15px; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px; }
-        .booking-summary svg { width: 20px; height: 20px; color: var(--brand-primary); flex-shrink: 0; }
-        #contact-fields { display: none; }
-        #contact-fields.visible { display: block; }
-    </style>
+ /* BOOKING FLOW */
+ .booking-step { margin-bottom: 30px; }
+ .booking-step h4 { font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+ .day-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 18px; }
+ .day-btn { flex-shrink: 0; min-width: 84px; padding: 12px 10px; background: var(--bg-alt); border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; text-align: center; transition: all 0.15s; font-family: inherit; }
+ .day-btn:hover { border-color: var(--brand-primary); }
+ .day-btn.selected { background: var(--brand-primary); border-color: var(--brand-primary); color: white; }
+ .day-btn .dow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; }
+ .day-btn .dnum { display: block; font-size: 22px; font-weight: 900; line-height: 1.1; margin-top: 2px; }
+ .day-btn .dmon { display: block; font-size: 11px; font-weight: 600; opacity: 0.7; }
+ .slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+ .slot-btn { padding: 12px 8px; background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--text-dark); transition: all 0.15s; font-family: inherit; }
+ .slot-btn:hover { border-color: var(--brand-primary); }
+ .slot-btn.selected { background: var(--brand-primary); border-color: var(--brand-primary); color: white; }
+ .slot-empty { color: var(--text-muted); font-size: 14px; font-style: italic; padding: 10px 0; }
+ .booking-summary { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; font-size: 15px; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px; }
+ .booking-summary svg { width: 20px; height: 20px; color: var(--brand-primary); flex-shrink: 0; }
+ #contact-fields { display: none; }
+ #contact-fields.visible { display: block; }
+ </style>
 </head>
 <body>
 
-    <div class="warning-bar">
-        A walkthrough for Chicho’s — <span>what your data is telling us, and what to do with it.</span>
-    </div>
+ <div class="warning-bar">
+ A walkthrough for Chicho’s, <span>what your data is telling us, and what to do with it.</span>
+ </div>
 
-    <div class="container" style="padding-top: 40px;">
-        <div class="wrapper">
-            
-            <!-- HERO SECTION -->
-            <div class="hero">
-                <div class="pre-headline">For Chicho’s — 6300-2 Annapolis Rd, Hyattsville</div>
-                <h1 class="main-headline">Here’s what your Toast and Google data are telling us — <span class="text-brand">and what we’d do about it.</span></h1>
-                <p class="sub-headline">We put together this walkthrough to share what we’re seeing in your numbers — sales patterns, what people search for, where reviews and listings could work harder. The goal isn’t to sell you anything. It’s to leave you with a clearer picture of how the restaurant is doing online, and a few ideas you can act on whether we work together or not.</p>
+ <div class="container" style="padding-top: 40px;">
+ <div class="wrapper">
+ 
+ <!-- HERO SECTION -->
+ <div class="hero">
+ <div class="pre-headline">For Chicho’s, 6300-2 Annapolis Rd, Hyattsville</div>
+ <h1 class="main-headline">Here’s what your Toast and Google data are telling us, <span class="text-brand">and what we’d do about it.</span></h1>
+ <p class="sub-headline">We put together this walkthrough to share what we’re seeing in your numbers, sales patterns, what people search for, where reviews and listings could work harder. The goal isn’t to sell you anything. It’s to leave you with a clearer picture of how the restaurant is doing online, and a few ideas you can act on whether we work together or not.</p>
 
-                <a href="#audit-booking" class="cta-button">
-                    <span class="cta-main-text">Walk Through It With Us — Free</span>
-                    <span class="cta-sub-text">30 minutes, no slides, no pitch.</span>
-                </a>
-                <p style="margin-top: 20px; font-size: 14px; font-weight: 600; color: var(--text-muted);">Put together by Kay Ali — 20+ years helping local businesses across many verticals make sense of their data.</p>
-            </div>
+ <a href="#audit-booking" class="cta-button">
+ <span class="cta-main-text">Walk Through It With Us, Free</span>
+ <span class="cta-sub-text">30 minutes, no slides, no pitch.</span>
+ </a>
+ <p style="margin-top: 20px; font-size: 14px; font-weight: 600; color: var(--text-muted);">Put together by Kay Ali, 20+ years helping local businesses across many verticals make sense of their data.</p>
+ </div>
 
-            <!-- KAY INTRO -->
-            <div class="section">
-                <div style="max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start;">
-                    <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
-                        <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--brand-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex-shrink: 0;">KA</div>
-                        <div>
-                            <div style="font-size: 12px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">A Note From</div>
-                            <h3 style="font-size: 24px; margin-top: 4px;">Kay Ali</h3>
-                            <p style="font-size: 14px; color: var(--text-muted); font-weight: 600;">Marketing &amp; Data Analyst · 20+ years with local businesses across many different verticals</p>
-                        </div>
-                    </div>
-                    <div style="font-size: 16px; line-height: 1.7; color: var(--text-body);">
-                        <p style="margin-bottom: 14px;">Hey — I’m Kay. I’ve spent the last 20+ years helping local businesses across all kinds of verticals — restaurants, retail, dental offices, gyms, contractors, salons — figure out what their numbers are actually saying. Not as a salesperson, but as the person owners call when they want a straight answer.</p>
-                        <p style="margin-bottom: 14px;">I put this walkthrough together because I noticed a few things in your Toast data and your Google page that are pretty common at this stage — and pretty fixable. The point isn’t to sell you on anything fancy. It’s to share what I’m seeing, explain why it matters, and let you decide what to do with it.</p>
-                        <p>If any of this is useful, great. If you just want a free second set of eyes on your numbers before you open the next location, that’s also great.</p>
-                    </div>
-                </div>
-            </div>
+ <!-- KAY INTRO -->
+ <div class="section">
+ <div style="max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start;">
+ <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+ <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--brand-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex-shrink: 0;">KA</div>
+ <div>
+ <div style="font-size: 12px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">A Note From</div>
+ <h3 style="font-size: 24px; margin-top: 4px;">Kay Ali</h3>
+ <p style="font-size: 14px; color: var(--text-muted); font-weight: 600;">Marketing &amp; Data Analyst · 20+ years with local businesses across many different verticals</p>
+ </div>
+ </div>
+ <div style="font-size: 16px; line-height: 1.7; color: var(--text-body);">
+ <p style="margin-bottom: 14px;">Hey, I’m Kay. I’ve spent the last 20+ years helping local businesses across all kinds of verticals, restaurants, retail, dental offices, gyms, contractors, salons, figure out what their numbers are actually saying. Not as a salesperson, but as the person owners call when they want a straight answer.</p>
+ <p style="margin-bottom: 14px;">I put this walkthrough together because I noticed a few things in your Toast data and your Google page that are pretty common at this stage, and pretty fixable. The point isn’t to sell you on anything fancy. It’s to share what I’m seeing, explain why it matters, and let you decide what to do with it.</p>
+ <p>If any of this is useful, great. If you just want a free second set of eyes on your numbers before you open the next location, that’s also great.</p>
+ </div>
+ </div>
+ </div>
 
-            <!-- PROBLEM SECTION -->
-            <div class="section bg-alt">
-                <h2 class="section-title text-center">You already have most of the answers.<br>They’re just spread across different tools.</h2>
-                <p class="text-center" style="font-size: 18px; max-width: 800px; margin: 0 auto;">Your Toast register has a year of sales data. Your Google page shows what people are searching for. Your reviews tell you what customers love. The information is there — it’s just sitting in different apps that don’t talk to each other. Here’s what we noticed when we looked at yours:</p>
+ <!-- PROBLEM SECTION -->
+ <div class="section bg-alt">
+ <h2 class="section-title text-center">You already have most of the answers.<br>They’re just spread across different tools.</h2>
+ <p class="text-center" style="font-size: 18px; max-width: 800px; margin: 0 auto;">Your Toast register has a year of sales data. Your Google page shows what people are searching for. Your reviews tell you what customers love. The information is there, it’s just sitting in different apps that don’t talk to each other. Here’s what we noticed when we looked at yours:</p>
 
-                <div class="problem-wrapper">
-                    <!-- Left: Problem List -->
-                    <div class="audit-findings">
-                        <h3 class="audit-title">Here’s what we usually find at a place like yours:</h3>
-                        <div class="audit-grid">
-                            <div class="audit-card">
-                                <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                                <div class="audit-text">
-                                    <strong>Slow Tuesdays and Wednesdays</strong>
-                                    Sales drop 25–40% on those days, and nothing is being done to bring people in.
-                                </div>
-                            </div>
-                            <div class="audit-card">
-                                <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                                <div class="audit-text">
-                                    <strong>Hidden From Google</strong>
-                                    Your website is missing the simple code Google needs to show you in search results.
-                                </div>
-                            </div>
-                            <div class="audit-card">
-                                <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                <div class="audit-text">
-                                    <strong>Wrong Google Listing</strong>
-                                    Your Google page just says “Restaurant.” That alone hides you from 40–60% of nearby searches.
-                                </div>
-                            </div>
-                            <div class="audit-card">
-                                <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                <div class="audit-text">
-                                    <strong>Mixed-Up Address Info</strong>
-                                    Your name, address, and phone don’t match across the 30+ websites that list you. Google sees that and pushes you down.
-                                </div>
-                            </div>
-                            <div class="audit-card">
-                                <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                <div class="audit-text">
-                                    <strong>Lost Catering Orders</strong>
-                                    People ask about catering and never hear back. Big-ticket orders walk out the door.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right: POS Mockup -->
-                    <div>
-                        <div class="pos-mockup">
-                            <div class="pos-header">
-                                <div class="pos-title">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
-                                    POS Terminal Data
-                                </div>
-                                <div class="pos-date">Net Sales - Last 7 Days</div>
-                            </div>
-                            
-                            <div class="pos-metrics">
-                                <div class="pos-metric">
-                                    <span>Avg Week</span>
-                                    <strong>$18.4K</strong>
-                                </div>
-                                <div class="pos-metric">
-                                    <span>Slow Days</span>
-                                    <strong style="color: var(--red-alert);">-38%</strong>
-                                </div>
-                            </div>
+ <div class="problem-wrapper">
+ <!-- Left: Problem List -->
+ <div class="audit-findings">
+ <h3 class="audit-title">Here’s what we usually find at a place like yours:</h3>
+ <div class="audit-grid">
+ <div class="audit-card">
+ <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+ <div class="audit-text">
+ <strong>Slow Tuesdays and Wednesdays</strong>
+ Sales drop 25 to 40% on those days, and nothing is being done to bring people in.
+ </div>
+ </div>
+ <div class="audit-card">
+ <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+ <div class="audit-text">
+ <strong>Hidden From Google</strong>
+ Your website is missing the simple code Google needs to show you in search results.
+ </div>
+ </div>
+ <div class="audit-card">
+ <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+ <div class="audit-text">
+ <strong>Wrong Google Listing</strong>
+ Your Google page just says “Restaurant.” That alone hides you from 40 to 60% of nearby searches.
+ </div>
+ </div>
+ <div class="audit-card">
+ <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+ <div class="audit-text">
+ <strong>Mixed-Up Address Info</strong>
+ Your name, address, and phone don’t match across the 30+ websites that list you. Google sees that and pushes you down.
+ </div>
+ </div>
+ <div class="audit-card">
+ <svg class="audit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+ <div class="audit-text">
+ <strong>Lost Catering Orders</strong>
+ People ask about catering and never hear back. Big-ticket orders walk out the door.
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- Right: POS Mockup -->
+ <div>
+ <div class="pos-mockup">
+ <div class="pos-header">
+ <div class="pos-title">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+ POS Terminal Data
+ </div>
+ <div class="pos-date">Net Sales - Last 7 Days</div>
+ </div>
+ 
+ <div class="pos-metrics">
+ <div class="pos-metric">
+ <span>Avg Week</span>
+ <strong>$18.4K</strong>
+ </div>
+ <div class="pos-metric">
+ <span>Slow Days</span>
+ <strong style="color: var(--red-alert);">-38%</strong>
+ </div>
+ </div>
 
-                            <div class="pos-chart-container">
-                                <div class="pos-alert">$1,200 lost daily</div>
-                                
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar" style="height: 60%;"></div>
-                                    <div class="pos-label">Mon</div>
-                                </div>
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar danger" style="height: 25%;"></div>
-                                    <div class="pos-label">Tue</div>
-                                </div>
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar danger" style="height: 22%;"></div>
-                                    <div class="pos-label">Wed</div>
-                                </div>
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar" style="height: 65%;"></div>
-                                    <div class="pos-label">Thu</div>
-                                </div>
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar" style="height: 95%;"></div>
-                                    <div class="pos-label">Fri</div>
-                                </div>
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar" style="height: 100%;"></div>
-                                    <div class="pos-label">Sat</div>
-                                </div>
-                                <div class="pos-bar-wrap">
-                                    <div class="pos-bar" style="height: 85%;"></div>
-                                    <div class="pos-label">Sun</div>
-                                </div>
-                            </div>
-                        </div>
-                        <p style="text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 15px; font-style: italic;">No guessing. We look at the actual slow spots in your sales and figure out what to do about them.</p>
-                    </div>
-                </div>
+ <div class="pos-chart-container">
+ <div class="pos-alert">$1,200 lost daily</div>
+ 
+ <div class="pos-bar-wrap">
+ <div class="pos-bar" style="height: 60%;"></div>
+ <div class="pos-label">Mon</div>
+ </div>
+ <div class="pos-bar-wrap">
+ <div class="pos-bar danger" style="height: 25%;"></div>
+ <div class="pos-label">Tue</div>
+ </div>
+ <div class="pos-bar-wrap">
+ <div class="pos-bar danger" style="height: 22%;"></div>
+ <div class="pos-label">Wed</div>
+ </div>
+ <div class="pos-bar-wrap">
+ <div class="pos-bar" style="height: 65%;"></div>
+ <div class="pos-label">Thu</div>
+ </div>
+ <div class="pos-bar-wrap">
+ <div class="pos-bar" style="height: 95%;"></div>
+ <div class="pos-label">Fri</div>
+ </div>
+ <div class="pos-bar-wrap">
+ <div class="pos-bar" style="height: 100%;"></div>
+ <div class="pos-label">Sat</div>
+ </div>
+ <div class="pos-bar-wrap">
+ <div class="pos-bar" style="height: 85%;"></div>
+ <div class="pos-label">Sun</div>
+ </div>
+ </div>
+ </div>
+ <p style="text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 15px; font-style: italic;">No guessing. We look at the actual slow spots in your sales and figure out what to do about them.</p>
+ </div>
+ </div>
 
-                <p class="text-center" style="margin-top: 40px; font-size: 22px; font-weight: 800;">The food and the people are doing their job. <span class="highlight">The data side has room to grow.</span></p>
-            </div>
+ <p class="text-center" style="margin-top: 40px; font-size: 22px; font-weight: 800;">The food and the people are doing their job. <span class="highlight">The data side has room to grow.</span></p>
+ </div>
 
-            <!-- TOAST ALONE VS TOAST + US SECTION -->
-            <div class="section">
-                <h2 class="section-title text-center">Toast Is Great — But It’s Only Half the Picture.</h2>
-                <p class="text-center" style="font-size: 18px; max-width: 760px; margin: 0 auto 40px;">Toast is a really good register. It tells you what you sold yesterday and which items moved. What it can’t tell you is <em>why</em> people came in, why they didn’t, or what would help tomorrow. That’s where the rest of your data comes in — and where most owners get stuck.</p>
+ <!-- TOAST ALONE VS TOAST + US SECTION -->
+ <div class="section">
+ <h2 class="section-title text-center">Toast Is Great, But It’s Only Half the Picture.</h2>
+ <p class="text-center" style="font-size: 18px; max-width: 760px; margin: 0 auto 40px;">Toast is a really good register. It tells you what you sold yesterday and which items moved. What it can’t tell you is <em>why</em> people came in, why they didn’t, or what would help tomorrow. That’s where the rest of your data comes in, and where most owners get stuck.</p>
 
-                <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;" class="compare-grid">
-                    <div style="background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px;">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                            <div style="width: 40px; height: 40px; background: #f3f4f6; color: var(--text-muted); font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px;">T</div>
-                            <h3 style="font-size: 22px;">What Toast Shows You</h3>
-                        </div>
-                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 18px; font-style: italic;">Toast is good at the “what.” It’s blind to the “why” and the “what’s next.”</p>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Total sales for the day, week, and month</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Top-selling items and combos</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Labor cost vs. sales</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Discounts, voids, and tips</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Online order totals from Toast’s ordering tool</li>
-                        </ul>
+ <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;" class="compare-grid">
+ <div style="background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px;">
+ <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+ <div style="width: 40px; height: 40px; background: #f3f4f6; color: var(--text-muted); font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px;">T</div>
+ <h3 style="font-size: 22px;">What Toast Shows You</h3>
+ </div>
+ <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 18px; font-style: italic;">Toast is good at the “what.” It’s blind to the “why” and the “what’s next.”</p>
+ <ul style="list-style: none; padding: 0;">
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Total sales for the day, week, and month</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Top-selling items and combos</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Labor cost vs. sales</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Discounts, voids, and tips</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Online order totals from Toast’s ordering tool</li>
+ </ul>
 
-                        <h4 style="margin-top: 28px; font-size: 16px; color: var(--red-alert); text-transform: uppercase; letter-spacing: 0.5px;">What Toast Can’t Help You With</h4>
-                        <ul style="list-style: none; padding: 0; margin-top: 12px;">
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Why Tuesday is slow — or what to do about it</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What people search on Google before they walk in</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Which reviews are hurting you and which are helping</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who asked about catering and never got a callback</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Whether your DoorDash and Uber Eats prices are leaking money</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to post on Instagram or TikTok this week</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who your repeat customers are and how to bring them back</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to actually do tomorrow to make more money</li>
-                        </ul>
-                    </div>
+ <h4 style="margin-top: 28px; font-size: 16px; color: var(--red-alert); text-transform: uppercase; letter-spacing: 0.5px;">What Toast Can’t Help You With</h4>
+ <ul style="list-style: none; padding: 0; margin-top: 12px;">
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Why Tuesday is slow, or what to do about it</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What people search on Google before they walk in</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Which reviews are hurting you and which are helping</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who asked about catering and never got a callback</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Whether your DoorDash and Uber Eats prices are leaking money</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to post on Instagram or TikTok this week</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who your repeat customers are and how to bring them back</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to actually do tomorrow to make more money</li>
+ </ul>
+ </div>
 
-                    <div style="background: var(--bg-main); border: 3px solid var(--brand-primary); border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.15);">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                            <div style="width: 40px; height: 40px; background: var(--brand-primary); color: white; font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px;">+</div>
-                            <h3 style="font-size: 22px;">What You Get With Toast + Our System</h3>
-                        </div>
-                        <p style="color: var(--text-body); font-size: 14px; margin-bottom: 18px; font-style: italic;">We take your Toast numbers and add the missing pieces — Google, reviews, ads, catering, customer lists — into one screen with clear next steps.</p>
+ <div style="background: var(--bg-main); border: 3px solid var(--brand-primary); border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.15);">
+ <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+ <div style="width: 40px; height: 40px; background: var(--brand-primary); color: white; font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px;">+</div>
+ <h3 style="font-size: 22px;">What You Get With Toast + Our System</h3>
+ </div>
+ <p style="color: var(--text-body); font-size: 14px; margin-bottom: 18px; font-style: italic;">We take your Toast numbers and add the missing pieces, Google, reviews, ads, catering, customer lists, into one screen with clear next steps.</p>
 
-                        <h4 style="font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">The Full Picture</h4>
-                        <ul style="list-style: none; padding: 0; margin-top: 12px;">
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Toast sales <strong>plus</strong> Google search views, ad clicks, review scores, and food-app numbers — all in one place</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The exact words people type into Google before finding (or missing) you</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A live customer list — every email, phone, and birthday tied back to Toast</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A catering follow-up list so no order slips through</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A weekly forecast: how busy each day will be, before it happens</li>
-                        </ul>
+ <h4 style="font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">The Full Picture</h4>
+ <ul style="list-style: none; padding: 0; margin-top: 12px;">
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Toast sales <strong>plus</strong> Google search views, ad clicks, review scores, and food-app numbers, all in one place</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The exact words people type into Google before finding (or missing) you</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A live customer list, every email, phone, and birthday tied back to Toast</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A catering follow-up list so no order slips through</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A weekly forecast: how busy each day will be, before it happens</li>
+ </ul>
 
-                        <h4 style="margin-top: 28px; font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">Real Recommendations You Can Use</h4>
-                        <ul style="list-style: none; padding: 0; margin-top: 12px;">
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Tuesday looks 30% slow — send this text to last month’s pickup customers by 11 AM.”</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “4 people searched ‘catering near me’ in Hyattsville this week — call these 4.”</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Your DoorDash chicken plate is priced $2 lower than dine-in — raise it Monday.”</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Post the rotisserie video at 4:45 PM today — that’s when your buyers are scrolling.”</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Maria left a 5-star review — reply now, ask her to bring a friend Friday.”</li>
-                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Saturday will be busy — prep 22% more chicken and add one extra cashier.”</li>
-                        </ul>
-                    </div>
-                </div>
+ <h4 style="margin-top: 28px; font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">Real Recommendations You Can Use</h4>
+ <ul style="list-style: none; padding: 0; margin-top: 12px;">
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Tuesday looks 30% slow, send this text to last month’s pickup customers by 11 AM.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “4 people searched ‘catering near me’ in Hyattsville this week, call these 4.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Your DoorDash chicken plate is priced $2 lower than dine-in, raise it Monday.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Post the rotisserie video at 4:45 PM today, that’s when your buyers are scrolling.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Maria left a 5-star review, reply now, ask her to bring a friend Friday.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Saturday will be busy, prep 22% more chicken and add one extra cashier.”</li>
+ </ul>
+ </div>
+ </div>
 
-                <p class="text-center" style="margin-top: 40px; font-size: 20px; font-weight: 800;">Toast tells you what happened. <span class="highlight">The full picture helps you decide what to do next.</span></p>
-            </div>
+ <p class="text-center" style="margin-top: 40px; font-size: 20px; font-weight: 800;">Toast tells you what happened. <span class="highlight">The full picture helps you decide what to do next.</span></p>
+ </div>
 
-            <!-- SECOND LOCATION SECTION -->
-            <div class="section bg-alt">
-                <h2 class="section-title text-center">Built Once Here. Ready for Location #2.</h2>
-                <p class="text-center" style="font-size: 17px; max-width: 720px; margin: 0 auto 30px;">Since you’re opening another spot, the work we do at Hyattsville does double duty. We use this location to figure out what works — the menu mix, the daily plan, the marketing, the staffing — so the new restaurant opens with a model that’s already proven, instead of starting from zero.</p>
+ <!-- SECOND LOCATION SECTION -->
+ <div class="section bg-alt">
+ <h2 class="section-title text-center">Built Once Here. Ready for Location #2.</h2>
+ <p class="text-center" style="font-size: 17px; max-width: 720px; margin: 0 auto 30px;">Since you’re opening another spot, the work we do at Hyattsville does double duty. We use this location to figure out what works, the menu mix, the daily plan, the marketing, the staffing, so the new restaurant opens with a model that’s already proven, instead of starting from zero.</p>
 
-                <div style="max-width: 720px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px;">
-                    <h4 style="font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px;">What carries over to the new location</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The daily plan your team already knows how to run</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The forecast model, trained on a year of your real sales data</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The ads, posts, and texts we already know convert</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Your existing customer list — invited to the new opening</li>
-                        <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> One dashboard showing both locations side by side</li>
-                    </ul>
-                </div>
-            </div>
+ <div style="max-width: 720px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px;">
+ <h4 style="font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px;">What carries over to the new location</h4>
+ <ul style="list-style: none; padding: 0;">
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The daily plan your team already knows how to run</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The forecast model, trained on a year of your real sales data</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The ads, posts, and texts we already know convert</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Your existing customer list, invited to the new opening</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> One dashboard showing both locations side by side</li>
+ </ul>
+ </div>
+ </div>
 
-            <!-- SOLUTION SECTION -->
-            <div class="section">
-                <h2 class="section-title text-center">One Dashboard. 10 Tools Connected.<br><span class="text-brand">Real Action Every Week.</span></h2>
-                <p class="text-center" style="font-size: 18px; max-width: 700px; margin: 0 auto; margin-bottom: 20px;">We don’t sell you hours of advice. We don’t hand you a 40-page report. We build a real, working system that grows your restaurant. Here’s what you get:</p>
+ <!-- SOLUTION SECTION -->
+ <div class="section">
+ <h2 class="section-title text-center">One Dashboard. 10 Tools Connected.<br><span class="text-brand">Real Action Every Week.</span></h2>
+ <p class="text-center" style="font-size: 18px; max-width: 700px; margin: 0 auto; margin-bottom: 20px;">We don’t sell you hours of advice. We don’t hand you a 40-page report. We build a real, working system that grows your restaurant. Here’s what you get:</p>
 
-                <!-- DASHBOARD MOCKUP VISUAL -->
-                <div class="dash-mockup">
-                    <div class="dash-top">
-                        <div class="dash-dot r"></div><div class="dash-dot y"></div><div class="dash-dot g"></div>
-                        <div style="margin-left: 10px; font-size: 12px; font-weight: 600; color: #64748b; letter-spacing: 1px;">CHICHO'S COMMAND CENTER</div>
-                    </div>
-                    <div class="dash-body">
-                        <div class="dash-grid">
-                            <div class="dash-stat">
-                                <div class="dash-stat-title">Google Search Views</div>
-                                <div class="dash-stat-val">12,408</div>
-                                <div class="dash-stat-trend">↑ 34% vs last month</div>
-                            </div>
-                            <div class="dash-stat">
-                                <div class="dash-stat-title">New Catering Calls</div>
-                                <div class="dash-stat-val">14</div>
-                                <div class="dash-stat-trend">↑ 5 booked</div>
-                            </div>
-                            <div class="dash-stat">
-                                <div class="dash-stat-title">Slow Day Boost</div>
-                                <div class="dash-stat-val">+$840</div>
-                                <div class="dash-stat-trend">From a text blast</div>
-                            </div>
-                        </div>
-                        <div class="dash-chart">
-                            [Live Data: Toast + Google + Social + Reviews — all in one place]
-                        </div>
-                    </div>
-                </div>
+ <!-- DASHBOARD MOCKUP VISUAL -->
+ <div class="dash-mockup">
+ <div class="dash-top">
+ <div class="dash-dot r"></div><div class="dash-dot y"></div><div class="dash-dot g"></div>
+ <div style="margin-left: 10px; font-size: 12px; font-weight: 600; color: #64748b; letter-spacing: 1px;">CHICHO'S COMMAND CENTER</div>
+ </div>
+ <div class="dash-body">
+ <div class="dash-grid">
+ <div class="dash-stat">
+ <div class="dash-stat-title">Google Search Views</div>
+ <div class="dash-stat-val">12,408</div>
+ <div class="dash-stat-trend">↑ 34% vs last month</div>
+ </div>
+ <div class="dash-stat">
+ <div class="dash-stat-title">New Catering Calls</div>
+ <div class="dash-stat-val">14</div>
+ <div class="dash-stat-trend">↑ 5 booked</div>
+ </div>
+ <div class="dash-stat">
+ <div class="dash-stat-title">Slow Day Boost</div>
+ <div class="dash-stat-val">+$840</div>
+ <div class="dash-stat-trend">From a text blast</div>
+ </div>
+ </div>
+ <div class="dash-chart">
+ [Live Data: Toast + Google + Social + Reviews, all in one place]
+ </div>
+ </div>
+ </div>
 
-                <div class="solution-grid">
-                    <div class="sol-card">
-                        <div class="sol-num">1</div>
-                        <h3>Your One Screen</h3>
-                        <p>One dashboard pulls live numbers from everywhere that matters. No more logging into ten different sites.</p>
-                        <ul>
-                            <li>Toast register (sales, hours, top items)</li>
-                            <li>Google search and website traffic</li>
-                            <li>Google Business page and online listings</li>
-                            <li>Social media, email, texts, and food apps</li>
-                        </ul>
-                    </div>
-                    <div class="sol-card">
-                        <div class="sol-num">2</div>
-                        <h3>Daily Game Plan</h3>
-                        <p>Every morning your manager opens one page. No guessing. Just read it and do it.</p>
-                        <ul>
-                            <li>Today’s outlook (slow, normal, or busy)</li>
-                            <li>Exact things to post or send, hour by hour</li>
-                            <li>The catering customers to call today</li>
-                            <li>How much chicken to prep based on the forecast</li>
-                        </ul>
-                    </div>
-                    <div class="sol-card">
-                        <div class="sol-num">3</div>
-                        <h3>Auto-Posting</h3>
-                        <p>Every video, photo, and offer gets posted to the right places — automatically.</p>
-                        <ul>
-                            <li>Videos go to TikTok, Instagram Reels, YouTube Shorts</li>
-                            <li>Events go to Facebook, Eventbrite, and Nextdoor</li>
-                            <li>Specials go to Google, text messages, and email</li>
-                        </ul>
-                    </div>
-                    <div class="sol-card">
-                        <div class="sol-num">4</div>
-                        <h3>50 Short Videos Built to Get Found</h3>
-                        <p>50 short videos made to show up when people in the DMV search things like “best Peruvian chicken near me.” These aren’t for likes — they’re built to bring in real customers.</p>
-                    </div>
-                    <div class="sol-card" style="grid-column: 1 / -1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--bg-alt);">
-                        <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: center;">
-                            <div style="max-width: 250px; text-align: left;">
-                                <h3 style="color: var(--brand-primary); font-size: 18px; margin-bottom: 5px;">5. Catering That Actually Closes</h3>
-                                <p style="font-size: 14px;">A simple list that catches every catering question and tells you who to call back. Most restaurants miss 80% of these — we’ll close them.</p>
-                            </div>
-                            <div style="max-width: 250px; text-align: left;">
-                                <h3 style="color: var(--brand-primary); font-size: 18px; margin-bottom: 5px;">6. Your Customer List</h3>
-                                <p style="font-size: 14px;">Every customer’s email, phone number, and birthday saved in one place. Auto-texts and emails go out without you lifting a finger.</p>
-                            </div>
-                            <div style="max-width: 250px; text-align: left;">
-                                <h3 style="color: var(--brand-primary); font-size: 18px; margin-bottom: 5px;">7. Next Week Forecast</h3>
-                                <p style="font-size: 14px;">Predicts next week’s sales day by day. Helps you prep smarter and schedule fewer wasted hours. Saves 3–8% on labor in 90 days.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ <div class="solution-grid">
+ <div class="sol-card">
+ <div class="sol-num">1</div>
+ <h3>Your One Screen</h3>
+ <p>One dashboard pulls live numbers from everywhere that matters. No more logging into ten different sites.</p>
+ <ul>
+ <li>Toast register (sales, hours, top items)</li>
+ <li>Google search and website traffic</li>
+ <li>Google Business page and online listings</li>
+ <li>Social media, email, texts, and food apps</li>
+ </ul>
+ </div>
+ <div class="sol-card">
+ <div class="sol-num">2</div>
+ <h3>Daily Game Plan</h3>
+ <p>Every morning your manager opens one page. No guessing. Just read it and do it.</p>
+ <ul>
+ <li>Today’s outlook (slow, normal, or busy)</li>
+ <li>Exact things to post or send, hour by hour</li>
+ <li>The catering customers to call today</li>
+ <li>How much chicken to prep based on the forecast</li>
+ </ul>
+ </div>
+ <div class="sol-card">
+ <div class="sol-num">3</div>
+ <h3>Auto-Posting</h3>
+ <p>Every video, photo, and offer gets posted to the right places, automatically.</p>
+ <ul>
+ <li>Videos go to TikTok, Instagram Reels, YouTube Shorts</li>
+ <li>Events go to Facebook, Eventbrite, and Nextdoor</li>
+ <li>Specials go to Google, text messages, and email</li>
+ </ul>
+ </div>
+ <div class="sol-card">
+ <div class="sol-num">4</div>
+ <h3>50 Short Videos Built to Get Found</h3>
+ <p>50 short videos made to show up when people in the DMV search things like “best Peruvian chicken near me.” These aren’t for likes, they’re built to bring in real customers.</p>
+ </div>
+ <div class="sol-card" style="grid-column: 1 / -1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--bg-alt);">
+ <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: center;">
+ <div style="max-width: 250px; text-align: left;">
+ <h3 style="color: var(--brand-primary); font-size: 18px; margin-bottom: 5px;">5. Catering That Actually Closes</h3>
+ <p style="font-size: 14px;">A simple list that catches every catering question and tells you who to call back. Most restaurants miss 80% of these, we’ll close them.</p>
+ </div>
+ <div style="max-width: 250px; text-align: left;">
+ <h3 style="color: var(--brand-primary); font-size: 18px; margin-bottom: 5px;">6. Your Customer List</h3>
+ <p style="font-size: 14px;">Every customer’s email, phone number, and birthday saved in one place. Auto-texts and emails go out without you lifting a finger.</p>
+ </div>
+ <div style="max-width: 250px; text-align: left;">
+ <h3 style="color: var(--brand-primary); font-size: 18px; margin-bottom: 5px;">7. Next Week Forecast</h3>
+ <p style="font-size: 14px;">Predicts next week’s sales day by day. Helps you prep smarter and schedule fewer wasted hours. Saves 3 to 8% on labor in 90 days.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 
-            <!-- DELIVERABLES SECTION -->
-            <div class="section bg-alt">
-                <h2 class="section-title">Here’s What Shows Up — and When.</h2>
+ <!-- DELIVERABLES SECTION -->
+ <div class="section bg-alt">
+ <h2 class="section-title">Here’s What Shows Up, and When.</h2>
 
-                <div class="timeline">
-                    <div class="t-item">
-                        <h3>Week 0 — Setup</h3>
-                        <ul>
-                            <li>Full check of your website, Google page, and online listings</li>
-                            <li>One official version of your name, address, and phone locked in</li>
-                            <li>Your dashboard built and connected (10 tools)</li>
-                            <li>A look back at 12 months of your sales and Google data</li>
-                        </ul>
-                    </div>
-                    <div class="t-item">
-                        <h3>Week 1 — Launch</h3>
-                        <ul>
-                            <li>First 30 days of daily plans delivered to you</li>
-                            <li>Catering list filled with your first 50 leads</li>
-                            <li>Email and texting set up and tied to Toast</li>
-                        </ul>
-                    </div>
-                    <div class="t-item">
-                        <h3>Weeks 2–4 — Build</h3>
-                        <ul>
-                            <li>All 50 short videos filmed and scheduled</li>
-                            <li>Google page rebuilt: photos, menu, services, Q&A, posts</li>
-                            <li>Facebook and Instagram ads launched in your area</li>
-                            <li>Reviews coming in and getting answered</li>
-                        </ul>
-                    </div>
-                    <div class="t-item">
-                        <h3>Weeks 5–12 — Run It</h3>
-                        <ul>
-                            <li>Weekly reports and updated daily plans</li>
-                            <li>Monthly check on your menu and prices</li>
-                            <li>We chase your catering leads and keep posting fresh content</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+ <div class="timeline">
+ <div class="t-item">
+ <h3>Week 0, Setup</h3>
+ <ul>
+ <li>Full check of your website, Google page, and online listings</li>
+ <li>One official version of your name, address, and phone locked in</li>
+ <li>Your dashboard built and connected (10 tools)</li>
+ <li>A look back at 12 months of your sales and Google data</li>
+ </ul>
+ </div>
+ <div class="t-item">
+ <h3>Week 1, Launch</h3>
+ <ul>
+ <li>First 30 days of daily plans delivered to you</li>
+ <li>Catering list filled with your first 50 leads</li>
+ <li>Email and texting set up and tied to Toast</li>
+ </ul>
+ </div>
+ <div class="t-item">
+ <h3>Weeks 2 to 4, Build</h3>
+ <ul>
+ <li>All 50 short videos filmed and scheduled</li>
+ <li>Google page rebuilt: photos, menu, services, Q&A, posts</li>
+ <li>Facebook and Instagram ads launched in your area</li>
+ <li>Reviews coming in and getting answered</li>
+ </ul>
+ </div>
+ <div class="t-item">
+ <h3>Weeks 5 to 12, Run It</h3>
+ <ul>
+ <li>Weekly reports and updated daily plans</li>
+ <li>Monthly check on your menu and prices</li>
+ <li>We chase your catering leads and keep posting fresh content</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-            <!-- FREE BONUS SECTION -->
-            <div class="section bg-alt" style="padding-bottom: 20px;">
-                <div class="bonus-box">
-                    <div class="bonus-badge">Included Free Bonus</div>
-                    <h2 class="section-title text-center" style="margin-bottom: 15px; margin-top: 10px;">Free Bonus: Fix Your Google Page Categories</h2>
-                    <p style="text-align: center; max-width: 750px; margin: 0 auto 30px; font-size: 16px; color: var(--text-body);">
-                        Google lets you pick <strong>one main category</strong> (yours just says “Restaurant”) and <strong>up to 9 more</strong>. Right now you’re basically invisible. Google has about 4,000 categories to choose from. We’ll add the right ones so people searching for chicken in Hyattsville actually find you.
-                    </p>
+ <!-- FREE BONUS SECTION -->
+ <div class="section bg-alt" style="padding-bottom: 20px;">
+ <div class="bonus-box">
+ <div class="bonus-badge">Included Free Bonus</div>
+ <h2 class="section-title text-center" style="margin-bottom: 15px; margin-top: 10px;">Free Bonus: Fix Your Google Page Categories</h2>
+ <p style="text-align: center; max-width: 750px; margin: 0 auto 30px; font-size: 16px; color: var(--text-body);">
+ Google lets you pick <strong>one main category</strong> (yours just says “Restaurant”) and <strong>up to 9 more</strong>. Right now you’re basically invisible. Google has about 4,000 categories to choose from. We’ll add the right ones so people searching for chicken in Hyattsville actually find you.
+ </p>
 
-                    <div style="background: #ffffff; border-radius: 8px; border: 1px solid var(--border-color); overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
-                            <thead>
-                                <tr>
-                                    <th style="padding: 15px; background: #f9fafb; border-bottom: 2px solid var(--border-color); color: var(--text-dark); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Category to Add</th>
-                                    <th style="padding: 15px; background: #f9fafb; border-bottom: 2px solid var(--border-color); color: var(--text-dark); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Why It Matters</th>
-                                    <th style="padding: 15px; background: #f9fafb; border-bottom: 2px solid var(--border-color); color: var(--text-dark); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">How Much It Helps</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Peruvian Restaurant</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Catches people searching for exactly what you serve.</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">High</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Rotisserie Chicken Restaurant</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Your charcoal rotisserie is the star — this puts you on the map for anyone searching “rotisserie chicken near me.”</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">High (Perfect Fit)</td>
-                                </tr>
-                                <tr style="background: #fafaf9;">
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Chicken Restaurant</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Catches the huge crowd just searching “chicken near me.”</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">Massive (Big Crowd)</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Latin American Restaurant</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Brings in a wider crowd around Hyattsville.</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">Medium</td>
-                                </tr>
-                                <tr style="background: #fafaf9;">
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Takeout Restaurant</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Catches the giant “food to go” crowd.</td>
-                                    <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">High</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 15px; border-bottom: none; font-weight: 800; color: var(--text-dark);">Caterer</td>
-                                    <td style="padding: 15px; border-bottom: none; color: var(--text-body);">Picks up office lunches and big party orders — the highest-paying jobs.</td>
-                                    <td style="padding: 15px; border-bottom: none; color: var(--green-success); font-weight: 800;">High (Big Money)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p style="text-align: center; margin-top: 15px; font-size: 13px; color: var(--text-muted); font-style: italic;">*In the first week, we’ll pick the 9+ categories that beat local rivals like Sausal Chicken in search.</p>
-                </div>
-            </div>
+ <div style="background: #ffffff; border-radius: 8px; border: 1px solid var(--border-color); overflow-x: auto;">
+ <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+ <thead>
+ <tr>
+ <th style="padding: 15px; background: #f9fafb; border-bottom: 2px solid var(--border-color); color: var(--text-dark); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Category to Add</th>
+ <th style="padding: 15px; background: #f9fafb; border-bottom: 2px solid var(--border-color); color: var(--text-dark); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">Why It Matters</th>
+ <th style="padding: 15px; background: #f9fafb; border-bottom: 2px solid var(--border-color); color: var(--text-dark); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px;">How Much It Helps</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Peruvian Restaurant</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Catches people searching for exactly what you serve.</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">High</td>
+ </tr>
+ <tr>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Rotisserie Chicken Restaurant</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Your charcoal rotisserie is the star, this puts you on the map for anyone searching “rotisserie chicken near me.”</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">High (Perfect Fit)</td>
+ </tr>
+ <tr style="background: #fafaf9;">
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Chicken Restaurant</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Catches the huge crowd just searching “chicken near me.”</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">Massive (Big Crowd)</td>
+ </tr>
+ <tr>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Latin American Restaurant</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Brings in a wider crowd around Hyattsville.</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">Medium</td>
+ </tr>
+ <tr style="background: #fafaf9;">
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); font-weight: 800; color: var(--text-dark);">Takeout Restaurant</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--text-body);">Catches the giant “food to go” crowd.</td>
+ <td style="padding: 15px; border-bottom: 1px solid var(--border-color); color: var(--green-success); font-weight: 800;">High</td>
+ </tr>
+ <tr>
+ <td style="padding: 15px; border-bottom: none; font-weight: 800; color: var(--text-dark);">Caterer</td>
+ <td style="padding: 15px; border-bottom: none; color: var(--text-body);">Picks up office lunches and big party orders, the highest-paying jobs.</td>
+ <td style="padding: 15px; border-bottom: none; color: var(--green-success); font-weight: 800;">High (Big Money)</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <p style="text-align: center; margin-top: 15px; font-size: 13px; color: var(--text-muted); font-style: italic;">*In the first week, we’ll pick the 9+ categories that beat local rivals like Sausal Chicken in search.</p>
+ </div>
+ </div>
 
-            <!-- WHO THIS IS FOR -->
-            <div class="section bg-dark">
-                <h2 class="section-title text-center">Made for Places Like Yours.</h2>
-                <ul class="check-list">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Family-owned (1–3 stores)</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> $80K to $300K in sales each month</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Great food (we fix the marketing, not the menu)</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Already running Toast (you do — perfect)</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Owner is in the building and ready to put in a few hours a week</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Located in the DMV or Mid-Atlantic</li>
-                </ul>
-                <p class="text-center" style="margin-top: 30px; font-size: 15px; color: #a8a29e;">If you want viral TikTok stunts or someone who promises to “handle everything” without you, I’m not your person. If you want a calm, steady look at your numbers and a plan you can actually follow, that’s what I do.</p>
-            </div>
+ <!-- WHO THIS IS FOR -->
+ <div class="section bg-dark">
+ <h2 class="section-title text-center">Made for Places Like Yours.</h2>
+ <ul class="check-list">
+ <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Family-owned (1 to 3 stores)</li>
+ <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> $80K to $300K in sales each month</li>
+ <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Great food (we fix the marketing, not the menu)</li>
+ <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Already running Toast (you do, perfect)</li>
+ <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Owner is in the building and ready to put in a few hours a week</li>
+ <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Located in the DMV or Mid-Atlantic</li>
+ </ul>
+ <p class="text-center" style="margin-top: 30px; font-size: 15px; color: #a8a29e;">If you want viral TikTok stunts or someone who promises to “handle everything” without you, I’m not your person. If you want a calm, steady look at your numbers and a plan you can actually follow, that’s what I do.</p>
+ </div>
 
-            <!-- OFFER / PRICING -->
-            <div class="section">
-                <h2 class="section-title text-center">What It Costs</h2>
-                <div class="pricing-box">
-                    <div class="price-row">
-                        <div class="price-col" style="border-right: 2px solid var(--border-color); padding-right: 30px;">
-                            <div class="price-title">Setup + First 90 Days</div>
-                            <div class="price-val">$X,XXX</div>
-                            <div class="price-sub">One-Time Fee</div>
-                            <ul>
-                                <li>Full check of your website, Google page, social, apps, and Toast</li>
-                                <li>Dashboard built and connected</li>
-                                <li>Website code fixed for Google</li>
-                                <li>5 days of filming all 50 videos</li>
-                                <li>Email, texting, and customer list set up</li>
-                                <li>Your first 30 days of daily plans written</li>
-                            </ul>
-                        </div>
-                        <div class="price-col" style="padding-left: 10px;">
-                            <div class="price-title">Monthly After That</div>
-                            <div class="price-val">$X,XXX<span style="font-size: 20px;">/mo</span></div>
-                            <div class="price-sub">Starts in Month 4</div>
-                            <ul>
-                                <li>New daily plans and reports each week</li>
-                                <li>Monthly menu and price check</li>
-                                <li>We chase reviews and catering leads</li>
-                                <li>10 fresh videos every 3 months</li>
-                                <li>Ongoing ad management</li>
-                            </ul>
-                            <p style="font-size: 12px; color: var(--text-muted); margin-top: 20px; font-style: italic;">*Plus the cost of the ads themselves (about $1,500–$2,500/mo) and the software tools (about $200–$400/mo).</p>
-                        </div>
-                    </div>
-                </div>
+ <!-- OFFER / PRICING -->
+ <div class="section">
+ <h2 class="section-title text-center">What It Costs</h2>
+ <div class="pricing-box">
+ <div class="price-row">
+ <div class="price-col" style="border-right: 2px solid var(--border-color); padding-right: 30px;">
+ <div class="price-title">Setup + First 90 Days</div>
+ <div class="price-val">$X,XXX</div>
+ <div class="price-sub">One-Time Fee</div>
+ <ul>
+ <li>Full check of your website, Google page, social, apps, and Toast</li>
+ <li>Dashboard built and connected</li>
+ <li>Website code fixed for Google</li>
+ <li>5 days of filming all 50 videos</li>
+ <li>Email, texting, and customer list set up</li>
+ <li>Your first 30 days of daily plans written</li>
+ </ul>
+ </div>
+ <div class="price-col" style="padding-left: 10px;">
+ <div class="price-title">Monthly After That</div>
+ <div class="price-val">$X,XXX<span style="font-size: 20px;">/mo</span></div>
+ <div class="price-sub">Starts in Month 4</div>
+ <ul>
+ <li>New daily plans and reports each week</li>
+ <li>Monthly menu and price check</li>
+ <li>We chase reviews and catering leads</li>
+ <li>10 fresh videos every 3 months</li>
+ <li>Ongoing ad management</li>
+ </ul>
+ <p style="font-size: 12px; color: var(--text-muted); margin-top: 20px; font-style: italic;">*Plus the cost of the ads themselves (about $1,500 $2,500/mo) and the software tools (about $200 $400/mo).</p>
+ </div>
+ </div>
+ </div>
 
-            </div>
+ </div>
 
-            <!-- FAQ SECTION -->
-            <div class="section bg-alt">
-                <h2 class="section-title text-center">Frequently Asked Questions</h2>
-                <div style="max-width: 700px; margin: 40px auto 0;">
-                    <div class="faq-item">
-                        <div class="faq-q">How is this different from a normal marketing agency?</div>
-                        <div class="faq-a">Most agencies handle one thing — like ads, or social, or SEO — and send you a report. We connect all 10 of your tools into one dashboard and tell your team what to do every day. You don’t get a report. You get a system that runs.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">Do I have to fire my current marketing person?</div>
-                        <div class="faq-a">No. We can train your manager or marketing person to run the system after the first 90 days, or we can keep running it for you.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">You said this works with Toast — that’s what we have. Anything else needed?</div>
-                        <div class="faq-a">Nope, you’re set. Toast is what we build everything around. We just need access to your reports.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">How much of my time is this going to take?</div>
-                        <div class="faq-a">About 2–3 hours a week for you, and 30–60 minutes a day for your manager. We do the heavy lifting.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">Do you take a cut of my sales?</div>
-                        <div class="faq-a">No. Flat setup fee, flat monthly fee, plus the ad spend you pay direct to Facebook/Google. No commissions, no surprises.</div>
-                    </div>
-                </div>
-            </div>
+ <!-- FAQ SECTION -->
+ <div class="section bg-alt">
+ <h2 class="section-title text-center">Frequently Asked Questions</h2>
+ <div style="max-width: 700px; margin: 40px auto 0;">
+ <div class="faq-item">
+ <div class="faq-q">How is this different from a normal marketing agency?</div>
+ <div class="faq-a">Most agencies handle one thing, like ads, or social, or SEO, and send you a report. We connect all 10 of your tools into one dashboard and tell your team what to do every day. You don’t get a report. You get a system that runs.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">Do I have to fire my current marketing person?</div>
+ <div class="faq-a">No. We can train your manager or marketing person to run the system after the first 90 days, or we can keep running it for you.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">You said this works with Toast, that’s what we have. Anything else needed?</div>
+ <div class="faq-a">Nope, you’re set. Toast is what we build everything around. We just need access to your reports.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">How much of my time is this going to take?</div>
+ <div class="faq-a">About 2 to 3 hours a week for you, and 30 to 60 minutes a day for your manager. We do the heavy lifting.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">Do you take a cut of my sales?</div>
+ <div class="faq-a">No. Flat setup fee, flat monthly fee, plus the ad spend you pay direct to Facebook/Google. No commissions, no surprises.</div>
+ </div>
+ </div>
+ </div>
 
-            <!-- FINAL CTA / BOOKING FORM -->
-            <div id="audit-booking" class="section bg-dark">
-                <h2 class="section-title text-center">Pick a Time and Let’s Walk Through It.</h2>
-                <p class="text-center" style="font-size: 18px; margin-bottom: 40px; max-width: 620px; margin-left: auto; margin-right: auto;">It’s 30 minutes with me, Kay. We’ll open your Google page, your website, and the last 30 days of Toast sales together. I’ll explain what I’m seeing in plain English. You’ll leave with a few things you can act on this week — whether we end up working together or not.</p>
+ <!-- FINAL CTA / BOOKING FORM -->
+ <div id="audit-booking" class="section bg-dark">
+ <h2 class="section-title text-center">Pick a Time and Let’s Walk Through It.</h2>
+ <p class="text-center" style="font-size: 18px; margin-bottom: 40px; max-width: 620px; margin-left: auto; margin-right: auto;">It’s 30 minutes with me, Kay. We’ll open your Google page, your website, and the last 30 days of Toast sales together. I’ll explain what I’m seeing in plain English. You’ll leave with a few things you can act on this week, whether we end up working together or not.</p>
 
-                <!-- Calendly inline widget -->
-                <div style="background: var(--bg-main); border-radius: 12px; padding: 8px; max-width: 900px; margin: 0 auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);">
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/tagglefish/30min?hide_gdpr_banner=1" style="min-width:320px;height:720px;"></div>
-                </div>
-                <p style="text-align: center; margin-top: 18px; font-size: 14px; color: #a8a29e;">Pick any open slot. You’ll get a calendar invite right after. No credit card, no obligation, no hard pitch.</p>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            </div>
+ <!-- Calendly inline widget -->
+ <div style="background: var(--bg-main); border-radius: 12px; padding: 8px; max-width: 900px; margin: 0 auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);">
+ <div class="calendly-inline-widget" data-url="https://calendly.com/tagglefish/30min?hide_gdpr_banner=1" style="min-width:320px;height:720px;"></div>
+ </div>
+ <p style="text-align: center; margin-top: 18px; font-size: 14px; color: #a8a29e;">Pick any open slot. You’ll get a calendar invite right after. No credit card, no obligation, no hard pitch.</p>
+ <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+ </div>
 
-        </div>
-    </div>
+ </div>
+ </div>
 </body>
 </html>
