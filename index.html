@@ -112,6 +112,9 @@
         .dash-stat-trend { font-size: 12px; font-weight: 700; color: #10b981; display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 4px; }
         .dash-chart { height: 120px; border: 1px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 600; font-size: 14px; background: #f8fafc; }
 
+        /* COMPARE GRID (Toast alone vs Toast + us) */
+        @media (min-width: 850px) { .compare-grid { grid-template-columns: 1fr 1fr !important; } }
+
         /* SOLUTION GRID */
         .solution-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
         @media (min-width: 768px) { .solution-grid { grid-template-columns: 1fr 1fr; } }
@@ -307,6 +310,70 @@
                 </div>
 
                 <p class="text-center" style="margin-top: 40px; font-size: 24px; font-weight: 900;">Your chicken is great. <span class="highlight">Your marketing isn’t.</span></p>
+            </div>
+
+            <!-- TOAST ALONE VS TOAST + US SECTION -->
+            <div class="section">
+                <h2 class="section-title text-center">Toast Is Great — But It Only Shows You Half the Picture.</h2>
+                <p class="text-center" style="font-size: 18px; max-width: 760px; margin: 0 auto 40px;">Toast is a great register. It tells you what you sold yesterday. But it can’t tell you <em>why</em> people came in, why they didn’t, or what to do about it tomorrow. That’s the gap we fill.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;" class="compare-grid">
+                    <div style="background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <div style="width: 40px; height: 40px; background: #f3f4f6; color: var(--text-muted); font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px;">T</div>
+                            <h3 style="font-size: 22px;">What Toast Shows You</h3>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 18px; font-style: italic;">Toast is good at the “what.” It’s blind to the “why” and the “what’s next.”</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Total sales for the day, week, and month</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Top-selling items and combos</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Labor cost vs. sales</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Discounts, voids, and tips</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Online order totals from Toast’s ordering tool</li>
+                        </ul>
+
+                        <h4 style="margin-top: 28px; font-size: 16px; color: var(--red-alert); text-transform: uppercase; letter-spacing: 0.5px;">What Toast Can’t Help You With</h4>
+                        <ul style="list-style: none; padding: 0; margin-top: 12px;">
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Why Tuesday is slow — or what to do about it</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What people search on Google before they walk in</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Which reviews are hurting you and which are helping</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who asked about catering and never got a callback</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Whether your DoorDash and Uber Eats prices are leaking money</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to post on Instagram or TikTok this week</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who your repeat customers are and how to bring them back</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to actually do tomorrow to make more money</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--bg-main); border: 3px solid var(--brand-primary); border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.15);">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <div style="width: 40px; height: 40px; background: var(--brand-primary); color: white; font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px;">+</div>
+                            <h3 style="font-size: 22px;">What You Get With Toast + Our System</h3>
+                        </div>
+                        <p style="color: var(--text-body); font-size: 14px; margin-bottom: 18px; font-style: italic;">We take your Toast numbers and add the missing pieces — Google, reviews, ads, catering, customer lists — into one screen with clear next steps.</p>
+
+                        <h4 style="font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">The Full Picture</h4>
+                        <ul style="list-style: none; padding: 0; margin-top: 12px;">
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Toast sales <strong>plus</strong> Google search views, ad clicks, review scores, and food-app numbers — all in one place</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The exact words people type into Google before finding (or missing) you</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A live customer list — every email, phone, and birthday tied back to Toast</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A catering follow-up list so no order slips through</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A weekly forecast: how busy each day will be, before it happens</li>
+                        </ul>
+
+                        <h4 style="margin-top: 28px; font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">Real Recommendations You Can Use</h4>
+                        <ul style="list-style: none; padding: 0; margin-top: 12px;">
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Tuesday looks 30% slow — send this text to last month’s pickup customers by 11 AM.”</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “4 people searched ‘catering near me’ in Hyattsville this week — call these 4.”</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Your DoorDash chicken plate is priced $2 lower than dine-in — raise it Monday.”</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Post the rotisserie video at 4:45 PM today — that’s when your buyers are scrolling.”</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Maria left a 5-star review — reply now, ask her to bring a friend Friday.”</li>
+                            <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Saturday will be busy — prep 22% more chicken and add one extra cashier.”</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="text-center" style="margin-top: 40px; font-size: 20px; font-weight: 900;">Toast tells you what happened. <span class="highlight">We tell you what to do next.</span></p>
             </div>
 
             <!-- SOLUTION SECTION -->
