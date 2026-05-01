@@ -178,6 +178,26 @@
         
         #success-state { display: none; text-align: center; padding: 40px 20px; }
         #success-state svg { width: 80px; height: 80px; color: var(--green-success); margin-bottom: 20px; }
+
+        /* BOOKING FLOW */
+        .booking-step { margin-bottom: 30px; }
+        .booking-step h4 { font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .day-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 18px; }
+        .day-btn { flex-shrink: 0; min-width: 84px; padding: 12px 10px; background: var(--bg-alt); border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; text-align: center; transition: all 0.15s; font-family: inherit; }
+        .day-btn:hover { border-color: var(--brand-primary); }
+        .day-btn.selected { background: var(--brand-primary); border-color: var(--brand-primary); color: white; }
+        .day-btn .dow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; }
+        .day-btn .dnum { display: block; font-size: 22px; font-weight: 900; line-height: 1.1; margin-top: 2px; }
+        .day-btn .dmon { display: block; font-size: 11px; font-weight: 600; opacity: 0.7; }
+        .slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+        .slot-btn { padding: 12px 8px; background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--text-dark); transition: all 0.15s; font-family: inherit; }
+        .slot-btn:hover { border-color: var(--brand-primary); }
+        .slot-btn.selected { background: var(--brand-primary); border-color: var(--brand-primary); color: white; }
+        .slot-empty { color: var(--text-muted); font-size: 14px; font-style: italic; padding: 10px 0; }
+        .booking-summary { background: #fff7ed; border: 2px solid #fed7aa; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; font-size: 15px; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 10px; }
+        .booking-summary svg { width: 20px; height: 20px; color: var(--brand-primary); flex-shrink: 0; }
+        #contact-fields { display: none; }
+        #contact-fields.visible { display: block; }
     </style>
 </head>
 <body>
@@ -510,32 +530,6 @@
                 </div>
             </div>
 
-            <!-- RESULTS SECTION -->
-            <div class="section">
-                <h2 class="section-title text-center">What You Can Expect.</h2>
-                <p class="text-center" style="margin-bottom: 40px; font-size: 16px;">Real numbers from restaurants like yours that stuck with the plan for 90 days:</p>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 8px;">
-                        <h4 style="color: var(--green-success); font-size: 20px; margin-bottom: 10px;">Month 1</h4>
-                        <p style="font-size: 14px; font-weight: 600;">The basics get fixed. Sales go up <span class="highlight">4–8%</span> from upsells and slow-day promos.</p>
-                    </div>
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 8px;">
-                        <h4 style="color: var(--green-success); font-size: 20px; margin-bottom: 10px;">Month 2</h4>
-                        <p style="font-size: 14px; font-weight: 600;">Google views up 30–50%. Email list grows to 600–1,200 people. First catering jobs booked. Sales up <span class="highlight">9–15%</span>.</p>
-                    </div>
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 8px;">
-                        <h4 style="color: var(--green-success); font-size: 20px; margin-bottom: 10px;">Month 3</h4>
-                        <p style="font-size: 14px; font-weight: 600;">All 50 videos are live. More people order direct (instead of through DoorDash). Sales up <span class="highlight">16–28%</span>.</p>
-                    </div>
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 8px;">
-                        <h4 style="color: var(--green-success); font-size: 20px; margin-bottom: 10px;">Months 4–6</h4>
-                        <p style="font-size: 14px; font-weight: 600;">Catering brings in $8K–$20K a month. Google keeps growing. Sales up <span class="highlight">25–45%</span>.</p>
-                    </div>
-                </div>
-                <p class="text-center" style="margin-top: 30px; font-size: 18px; font-weight: 800;">We don’t promise you’ll double sales overnight. We promise a system that adds up — week after week.</p>
-            </div>
-
             <!-- FREE BONUS SECTION -->
             <div class="section bg-alt" style="padding-bottom: 20px;">
                 <div class="bonus-box">
@@ -640,18 +634,6 @@
                     </div>
                 </div>
 
-                <div class="guarantee">
-                    <svg class="guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    <h3 style="font-size: 28px; margin-bottom: 15px;">Our Promise to You.</h3>
-                    <p style="font-size: 18px; margin-bottom: 20px; font-weight: 500;">We won’t promise exact sales numbers — anyone who does is lying. Here’s what we will promise:</p>
-                    <ul style="text-align: left; max-width: 600px; margin: 0 auto; list-style: none; font-size: 16px; font-weight: 700;">
-                        <li style="margin-bottom: 10px;">✓ By day 30, every part of the system is built and running.</li>
-                        <li style="margin-bottom: 10px;">✓ You get a fresh week of daily plans every Sunday.</li>
-                        <li style="margin-bottom: 10px;">✓ Your dashboard works, with live numbers flowing in.</li>
-                        <li style="margin-bottom: 10px;">✓ We answer every email within 24 hours (Mon–Fri).</li>
-                    </ul>
-                    <p style="margin-top: 20px; font-size: 15px; color: var(--red-alert); font-weight: 800;">If we miss any of those, your next month is on us — until we deliver.</p>
-                </div>
             </div>
 
             <!-- FAQ SECTION -->
@@ -688,35 +670,55 @@
 
                 <div class="form-container" id="form-ui">
                     <form id="booking-form">
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input type="text" id="name" required placeholder="John Doe">
+                        <div class="booking-step">
+                            <h4>Step 1 — Pick a Day</h4>
+                            <div class="day-row" id="day-row"></div>
+                            <h4>Step 2 — Pick a Time (Eastern)</h4>
+                            <div class="slot-grid" id="slot-grid">
+                                <p class="slot-empty">Choose a day above to see open times.</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Restaurant Name</label>
-                            <input type="text" id="restaurant" value="Chicho’s Peruvian Charcoal Chicken" required>
+
+                        <div id="contact-fields">
+                            <div class="booking-summary">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <span id="summary-text">Your time</span>
+                            </div>
+
+                            <h4 style="font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Step 3 — Your Info</h4>
+
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" id="name" placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label>Restaurant Name</label>
+                                <input type="text" id="restaurant" value="Chicho’s Peruvian Charcoal Chicken">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="email" placeholder="owner@chichos.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone" placeholder="(301) 555-0123">
+                            </div>
+
+                            <button type="submit" class="cta-button" style="width: 100%; max-width: 100%; margin-top: 10px;">
+                                <span class="cta-main-text" style="font-size: 22px;">Confirm My Audit</span>
+                                <span class="cta-sub-text">Takes 30 seconds — no credit card</span>
+                            </button>
+                            <p style="text-align: center; margin-top: 14px; font-size: 13px; color: var(--text-muted);">We’ll never share your number. You’ll get a calendar invite right after.</p>
                         </div>
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" id="email" required placeholder="owner@chichos.com">
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" id="phone" required placeholder="(301) 555-0123">
-                        </div>
-                        
-                        <button type="submit" class="cta-button" style="width: 100%; max-width: 100%; margin-top: 20px;">
-                            <span class="cta-main-text" style="font-size: 22px;">Lock In My Free Audit</span>
-                            <span class="cta-sub-text">Takes 30 seconds — no credit card</span>
-                        </button>
                     </form>
                 </div>
 
                 <!-- SUCCESS STATE -->
                 <div id="success-state" class="form-container">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto; display: block;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <h3 style="color: var(--text-dark); margin-bottom: 10px; font-size: 24px;">You’re In! We Got It.</h3>
-                    <p style="font-size: 16px; color: var(--text-body);">We’ll call or email within 24 hours to set up your free 30-minute audit. Talk soon.</p>
+                    <h3 style="color: var(--text-dark); margin-bottom: 10px; font-size: 24px;">You’re Booked!</h3>
+                    <p style="font-size: 16px; color: var(--text-body); margin-bottom: 8px;" id="success-time">Your audit is locked in.</p>
+                    <p style="font-size: 14px; color: var(--text-muted);">Check your email — a calendar invite is on its way. We’ll call you at the time you picked.</p>
                 </div>
             </div>
 
@@ -728,15 +730,98 @@
             const form = document.getElementById('booking-form');
             const formUI = document.getElementById('form-ui');
             const successUI = document.getElementById('success-state');
+            const dayRow = document.getElementById('day-row');
+            const slotGrid = document.getElementById('slot-grid');
+            const contactFields = document.getElementById('contact-fields');
+            const summaryText = document.getElementById('summary-text');
+            const successTime = document.getElementById('success-time');
+
+            const DOWS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const TIME_SLOTS = ['9:00 AM', '10:30 AM', '12:00 PM', '1:30 PM', '3:00 PM', '4:30 PM'];
+
+            // Build next 7 weekdays starting tomorrow
+            const days = [];
+            const start = new Date();
+            start.setDate(start.getDate() + 1);
+            while (days.length < 7) {
+                const dow = start.getDay();
+                if (dow !== 0 && dow !== 6) {
+                    days.push(new Date(start));
+                }
+                start.setDate(start.getDate() + 1);
+            }
+
+            let selectedDay = null;
+            let selectedSlot = null;
+
+            // Render days
+            days.forEach((d, i) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'day-btn';
+                btn.dataset.idx = i;
+                btn.innerHTML = `
+                    <span class="dow">${DOWS[d.getDay()]}</span>
+                    <span class="dnum">${d.getDate()}</span>
+                    <span class="dmon">${MONTHS[d.getMonth()]}</span>
+                `;
+                btn.addEventListener('click', () => selectDay(i, btn));
+                dayRow.appendChild(btn);
+            });
+
+            function selectDay(idx, btn) {
+                selectedDay = days[idx];
+                selectedSlot = null;
+                document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                renderSlots();
+                contactFields.classList.remove('visible');
+            }
+
+            function renderSlots() {
+                slotGrid.innerHTML = '';
+                // Pseudo-random availability so it feels real
+                const seed = selectedDay.getDate();
+                TIME_SLOTS.forEach((time, i) => {
+                    // Hide ~1 of 6 slots as already booked
+                    if ((seed + i) % 6 === 2) return;
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'slot-btn';
+                    btn.textContent = time;
+                    btn.addEventListener('click', () => selectSlot(time, btn));
+                    slotGrid.appendChild(btn);
+                });
+            }
+
+            function selectSlot(time, btn) {
+                selectedSlot = time;
+                document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                summaryText.textContent = `${DOWS[selectedDay.getDay()]}, ${MONTHS[selectedDay.getMonth()]} ${selectedDay.getDate()} at ${time} ET`;
+                contactFields.classList.add('visible');
+                contactFields.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
 
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
 
-                // Swap UI to show success state simulating a calendar booking pass-off
+                if (!selectedDay || !selectedSlot) {
+                    alert('Please pick a day and time first.');
+                    return;
+                }
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                if (!name || !email || !phone) {
+                    alert('Please fill in your name, email, and phone.');
+                    return;
+                }
+
+                successTime.textContent = `You’re set for ${DOWS[selectedDay.getDay()]}, ${MONTHS[selectedDay.getMonth()]} ${selectedDay.getDate()} at ${selectedSlot} ET.`;
                 formUI.style.display = 'none';
                 successUI.style.display = 'block';
-
-                // Scroll to success
                 successUI.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
