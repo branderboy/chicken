@@ -1,0 +1,461 @@
+Asset 1: POS (Toast)
+Role: System of record for every transaction. The truth layer.
+What it FEEDS to the dashboard:
+
+Daily sales by daypart
+Menu item velocity (units + revenue)
+Order channel mix (dine-in / takeout / online direct / DoorDash / Uber Eats / Grubhub)
+AOV by channel
+Customer email captures (where prompted)
+Loyalty member behavior
+Catering vs retail split
+
+What the dashboard DISTRIBUTES based on POS data:
+
+Forecasted sales for tomorrow / next 7 days
+Slow daypart alerts → triggers SMS/Email/Meta ads
+Top-seller flags → triggers content (TikTok, GMB posts, ad creative)
+Bottom-seller flags → triggers menu engineering review
+Channel mix shifts → triggers margin protection moves (push direct ordering when DoorDash share grows)
+New customer captures → triggers welcome series in email platform
+
+Refresh cadence: Daily auto-export → dashboard. Weekly manual review.
+Owner: GM or owner pulls every Sunday night.
+
+Asset 2: Website (Google Search Console + Google Analytics 4)
+Role: Visibility layer. Tells you who's finding you, what they search, and what they do once they land.
+What it FEEDS to the dashboard:
+From GSC:
+
+Search queries Chicho's ranks for
+Click-through rates per query
+Average position (ranking) per query
+Pages getting impressions vs clicks
+Indexing status (any pages dropped from index?)
+
+From GA4:
+
+Sessions by source (Google, social, direct, paid)
+Top landing pages
+Conversion events (order clicks, phone calls, directions, catering form)
+Bounce rate and engagement time
+Device breakdown (mobile vs desktop)
+
+What the dashboard DISTRIBUTES based on Website data:
+
+New keyword opportunities → triggers content creation (blog posts, location pages)
+Low-CTR pages → triggers title/meta rewrites
+High-traffic pages with low conversion → triggers UX fixes
+Mobile bounce spikes → triggers mobile optimization tasks
+Source attribution → tells you which channels drive orders, where to spend more
+Indexing drops → triggers immediate SEO audit
+
+Refresh cadence: Weekly review. Monthly deeper analysis.
+Owner: Whoever handles digital (you, agency, VA).
+
+Asset 3: GMB / TripAdvisor / Bing Local
+Role: Local discovery layer across the three search engines that matter.
+What it FEEDS to the dashboard:
+From GMB:
+
+Direction requests by day of week
+Calls by day of week
+Profile views (Search vs Maps)
+Photo views
+Top search queries
+Popular Times graphs
+New reviews + sentiment
+Q&A activity
+
+From TripAdvisor:
+
+Ranking position in local restaurants list
+New reviews + sentiment
+Photo upload activity
+Bookmark / save count
+
+From Bing Places:
+
+Listing views
+Click-throughs to website
+Direction requests
+Bing-specific search queries (different demographic than Google: older, often desktop, often higher AOV)
+
+What the dashboard DISTRIBUTES based on local search data:
+
+Day-of-week intent patterns → feeds daily prompt forecasting
+Search query gaps (e.g., "catering" searched, no catering revenue) → triggers catering page content + Meta ads
+Photo view drops → triggers fresh photo upload
+New review notifications → triggers response queue (24-48hr SLA)
+Q&A questions → triggers FAQ page updates on website
+TripAdvisor ranking shifts → triggers review acquisition pushes
+Bing-specific queries → expands keyword targeting
+
+Refresh cadence: Daily quick-check (reviews, Q&A). Weekly deep dive.
+Owner: Manager handles daily review responses. Owner/GM does weekly review.
+
+Asset 4: NAP Reconciliation
+Role: Data integrity layer. The thing nobody thinks about until it kills your local rankings.
+What it FEEDS to the dashboard:
+
+Citation accuracy score across 30+ directories
+Mismatched listings flagged
+Duplicate listings flagged
+Missing listings flagged
+Schema/sameAs implementation status on website
+
+What the dashboard DISTRIBUTES based on NAP data:
+
+Citation cleanup queue (prioritized: Tier 1 / Tier 2 / Tier 3)
+Schema markup updates needed
+sameAs array updates when new social profiles get added
+Duplicate listing removal tasks
+Bing/Apple Maps/Yelp sync issues
+
+The canonical NAP record (the single source of truth):
+Chicho's Peruvian Charcoal Chicken
+6300-2 Annapolis Rd, Ste 2
+Hyattsville, MD 20784
+(301) 501-5771
+chichoschicken.com
+This lives in the dashboard as the master record. Every channel pulls from it. Any deviation gets flagged.
+Refresh cadence: Monthly audit. Real-time monitoring via tool (Moz Local, BrightLocal, or Yext).
+Owner: SEO contractor or you. Set-and-forget once cleaned, but needs monthly verification.
+
+Asset 5: Social Media + Nextdoor
+Role: Awareness and community layer. Where you build brand and reach people not actively searching.
+What it FEEDS to the dashboard:
+From TikTok / Instagram / Facebook:
+
+Post performance (views, likes, shares, comments, saves)
+Follower growth rate
+Profile visit rate from posts
+Link clicks from bio
+Top performing content themes
+Comment sentiment
+
+From Nextdoor:
+
+Post reach by neighborhood
+Engagement (likes, comments, shares)
+Recommendations earned
+Direct messages received
+Neighborhood click-throughs
+
+What the dashboard DISTRIBUTES based on social data:
+
+Top-performing content → repurposed across channels and into Meta ad creative
+Underperforming content → flagged for kill or pivot
+Engagement spikes → triggers immediate response (the "comment within 2 hrs" rule for viral moments)
+Nextdoor neighborhood gaps → expand posting radius or run Nextdoor ads in weak zones
+Best post times by platform → adjusts posting schedule
+Comment sentiment shifts → flags potential brand issues
+
+The asset queue: From the 50-video TikTok batch + ongoing photo shoots + weekly content production. Each asset gets distributed to:
+
+TikTok (primary post)
+Instagram Reels (same day)
+Facebook Reels (same day)
+YouTube Shorts (next day)
+GMB posts (curated weekly)
+Nextdoor (selective, only the most local-relevant)
+Meta ads (top performers become paid creative)
+Email newsletters (best content embedded weekly)
+
+Refresh cadence: Daily posting. Weekly performance review.
+Owner: Content lead (you, contractor, or in-house if you have one).
+
+Asset 6: Email
+Role: Owned audience layer. The highest-margin channel because every send costs nearly zero.
+What it FEEDS to the dashboard:
+
+List size + growth rate
+Open rates by campaign
+Click rates by campaign
+Conversion rates (email → order)
+Revenue attributed to email
+Segment performance (VIPs vs lapsed vs new)
+Unsubscribe rate
+Birthday capture rate
+
+What the dashboard DISTRIBUTES based on email data:
+
+Weekly send queue (Tuesday blast + segment-specific sends)
+Triggered automation status check (welcome series, birthday, win-back, post-purchase)
+List hygiene flags (high bounce rate, low engagement segments)
+A/B test results → applies winning formats forward
+Capture rate shortfalls → triggers re-training of in-store staff on email-ask script
+Best subject lines → reused across SMS and social
+Top-performing offers → become Meta ad creative
+
+The automation flows running in background:
+
+Welcome series (3 emails over 14 days)
+Post-purchase thank you + review request
+Birthday week free dessert
+60-day win-back ($5 off)
+90-day deep win-back ($10 off + free side)
+VIP appreciation (top 10% spenders, monthly exclusive offer)
+Catering follow-up (90 days post-event)
+
+Refresh cadence: Weekly Tuesday send. Automations run continuously.
+Owner: You or a marketing VA.
+
+Asset 7: Rewards Platform
+Role: Retention layer. Turns one-time customers into regulars.
+What it FEEDS to the dashboard:
+
+Member count + growth rate
+Member vs non-member AOV
+Visit frequency by member tier
+Points earned vs redeemed
+Most popular reward redemptions
+Inactive member count (haven't earned/redeemed in 60+ days)
+Referrals generated (if program supports it)
+
+What the dashboard DISTRIBUTES based on rewards data:
+
+Member-only offers via email/SMS
+Tier upgrade celebrations (you just hit Gold!)
+Inactive member win-back triggers
+Referral push campaigns
+Reward redemption insights → guides menu development (what people actually want for free tells you what they value)
+Member exclusive events → feeds Asset 10 (Events)
+
+Setup: Toast Loyalty as the foundation. Optionally layered with Marsello, Thanx, or Spendgo for deeper automation.
+Refresh cadence: Monthly performance review. Real-time triggers.
+Owner: Auto-managed mostly. Monthly check-in.
+
+Asset 8: Food Apps (DoorDash / Uber Eats / Grubhub)
+Role: Third-party demand layer. High-cost, high-volume channels that need active management.
+What it FEEDS to the dashboard:
+From each platform:
+
+Sales by week
+Order count by week
+AOV per platform
+Items sold ranking
+Conversion rate (impressions → orders)
+Sponsored Listing performance + ROAS
+Promo redemption rates
+Customer review trends per platform
+
+What the dashboard DISTRIBUTES based on food app data:
+
+Cross-platform performance comparison → reallocate ad spend to best ROAS
+Underperforming menu items → photo refresh, description rewrite, or kill
+Top items per platform → ensure they stay top of menu listing
+Promo expiration alerts → renewal queue
+Direct-order migration → printed inserts in every third-party app order
+Commission cost vs sales → margin analysis monthly
+Review trends per app → tier-specific response priority
+
+Refresh cadence: Weekly per platform. Monthly cross-platform review.
+Owner: GM or you, depending on volume.
+
+Asset 9: Reviews Intel Dashboard
+Role: Voice-of-customer aggregator. Pulls all reviews from all platforms into one place.
+What it FEEDS to the dashboard:
+Aggregated review data from:
+
+Google Business Profile
+Yelp
+TripAdvisor
+DoorDash
+Uber Eats
+Grubhub
+Facebook
+Nextdoor recommendations
+Restaurantji
+Toast reviews (if enabled)
+
+For each review:
+
+Platform
+Star rating
+Date
+Theme/topic mentioned (auto-tagged: food quality, service, speed, cleanliness, value, specific menu items)
+Sentiment (positive / neutral / negative)
+Response status (responded / not yet)
+Response time
+
+What the dashboard DISTRIBUTES based on review intel:
+
+Daily response queue (sorted by urgency: 1-2 star = today, 3 star = within 48 hrs, 4-5 star = within 5 days)
+Theme alerts → operational fixes (e.g., "wait time" mentioned in 4 reviews this week → throughput audit)
+Hero product confirmation → marketing campaign triggers (e.g., "yellow sauce" praised in 8 reviews → TikTok video, GMB post, Meta ad creative)
+Staff recognition → who got named positively (training reinforcement)
+Negative pattern alerts → owner gets pinged when 3+ negative reviews share a theme in 30 days
+Review velocity tracking → if reviews slow down, capture system needs attention
+Cross-platform sentiment comparison → e.g., DoorDash reviews trending negative while in-store positive = delivery issue, not food issue
+
+Tools to power this: Birdeye, Podium, Reputation, Reviewshake, or even a manual Google Sheet aggregator if budget is tight. The goal is one inbox, not 10 separate apps to check.
+Refresh cadence: Daily review check. Weekly theme analysis. Monthly trend report.
+Owner: Manager handles responses. Owner reviews trends weekly.
+
+Asset 10: Events (Customer Day) → Eventbrite + Facebook Events + Luma
+Role: Community + acquisition layer. Brings people through the door for a reason beyond food.
+What it FEEDS to the dashboard:
+
+Event RSVPs per platform
+Attendance vs RSVP conversion rate
+Source of attendees (which platform drove them)
+Spend per event attendee
+Repeat attendance (did they come back?)
+Email captures from event signups
+Social share rate of event posts
+
+What the dashboard DISTRIBUTES from each event:
+When an event is created in the dashboard, it auto-distributes to:
+
+Eventbrite listing (broader reach, search-friendly)
+Facebook Event (community + RSVP function)
+Luma (newer, professional crowd, good for catering targets)
+GMB Post (local search)
+Nextdoor Post (neighborhood)
+Email blast to list
+SMS announcement
+Instagram + TikTok content
+Website /events page
+In-store signage (table tents, window decals)
+
+Event types to run:
+Customer Day (monthly): Themed appreciation day. "Peruvian Independence Day Brunch" / "Family Sunday" / "Spice Lovers Tasting." Free starter for first 50 customers. Photo-friendly setup. Drives repeat visits.
+Catering Showcase (quarterly): Invite-only tasting for businesses, churches, schools, HOAs within 5 miles. Catered samples, menu booklet, business cards. One showcase = 5-15 catering accounts typically.
+Pop-Up Themed Nights (bi-weekly): Live music night, ladies' night, family movie night, sports viewing. Drives slow-day traffic.
+Cooking Class / Demo (quarterly): How to make Peruvian sauces, the rotisserie process. Ticketed via Eventbrite. $15-25 entry. Drives social content + customer affinity.
+What the dashboard tracks per event:
+
+ROI: cost vs revenue + email captures + repeat visits attributed
+Best-performing event types → repeat
+Best-performing channels per event → reallocate promotion
+
+Refresh cadence: Monthly event creation. Real-time RSVP tracking.
+Owner: You or a marketing lead.
+
+How the Dashboard Pulls It All Together
+The dashboard isn't 10 separate dashboards. It's one view with three sections:
+Section 1: Daily View
+What the manager sees every morning at 9am.
+TODAY: TUESDAY, MAY 5
+FORECAST: SLOW (-22% vs avg)
+WEATHER: Rain, 58°F (favors delivery, hurts dine-in)
+
+PRIORITY ACTIONS:
+□ 10am - Send Tuesday SMS blast (template ready)
+□ 11am - Post GMB family meal special
+□ 11:30am - Post Nextdoor (neighborhoods: Landover Hills, Hyattsville)
+□ 1pm - 5 catering calls (list below)
+□ 2pm - Sales pace check; trigger Meta boost if <80%
+
+CALL LIST (Catering):
+1. Maria @ Riverdale Elementary - last order 73 days ago
+2. James @ Bladensburg HOA - inquiry from 5/1, no quote sent
+3. Pastor Reyes @ St. Camillus - quarterly check-in due
+4. HR @ Census Bureau - new prospect (no contact yet)
+5. Dr. Patel @ PG Hospital - last catering 90 days ago
+
+ALERTS:
+⚠ 1 new 2-star review on Yelp (yesterday) - response needed
+⚠ DoorDash sponsored listing budget hit cap at 6am - paused
+✓ GMB direction requests +18% week-over-week (good trend)
+✓ TikTok video from Sunday at 47K views - engaging in comments
+Section 2: Weekly View
+What you (Kay) see every Sunday night for planning.
+WEEK ENDING: SUN MAY 4
+
+REVENUE:
+- Total: $X (vs $X last week, vs $X same week last year)
+- Best day: Saturday, $X
+- Worst day: Tuesday, $X (-26% vs avg)
+- Forecast accuracy this week: ±8% (good)
+
+CHANNEL MIX:
+- Dine-in: 38% ↑
+- Takeout: 22% →
+- Direct online: 14% ↑↑ (migration working)
+- DoorDash: 18% ↓
+- Uber Eats: 6% ↓
+- Catering: 2% (1 event, $480)
+
+TOP MOVERS:
+- Whole chicken family meal: +12% units (continue push)
+- Tres leches: +34% (upsell script working)
+- Chicharrón de pollo: -15% (review or pivot)
+
+GMB INTEL:
+- Profile views: 2,840 (+11% wow)
+- Direction requests: 198 (+18%)
+- Calls: 87 (+9%)
+- Top query: "peruvian chicken hyattsville" (84 impressions)
+- Search opportunity: "rotisserie chicken catering DC" (32 impressions, no rank)
+
+REVIEWS:
+- New: 7 (4.6 avg)
+- Themes: yellow sauce praised x3, wait time mentioned x2
+- Action: throughput audit on Friday peak
+
+NEXT WEEK ACTIONS (3 max):
+1. Menu: Push tres leches at register, add to digital menu top
+2. Marketing: Launch "Catering DMV" landing page + Meta ads
+3. Ops: Friday rush audit - throughput problem to solve
+Section 3: Monthly View
+What you see end of month for strategy.
+MAY 2026 OVERVIEW:
+
+REVENUE: $X (vs goal $X, +/-X%)
+GROWTH: +X% mom, +X% yoy
+MARGIN HEALTH: X% (target 18%)
+
+CHANNEL MIX SHIFT (vs April):
+- Direct online: 11% → 14% (+3pp ✓)
+- DoorDash: 22% → 18% (-4pp ✓ migration working)
+- Catering: 1% → 2% (+1pp, slow but trending)
+
+CUSTOMER METRICS:
+- Email list: 1,840 (+340 mom)
+- SMS list: 720 (+180 mom)
+- Loyalty members: 480 (+95 mom)
+- Catering CRM: 38 active (+12 mom)
+
+TOP CONTENT (drove most traffic/orders):
+1. TikTok "Yellow sauce reveal" - 247K views
+2. Email "Family Meal Tuesday" - 38% open, 6% click
+3. GMB post "Mother's Day catering" - 412 actions
+
+NEXT MONTH FOCUS (1 big thing):
+"Catering Showcase Event" - Saturday June 14
+- Invite list: 50 nearby businesses
+- Goal: 5 new recurring catering accounts
+- Distribution: Eventbrite + LinkedIn + Email
+
+
+
+CONTENT SOURCE:                    DISTRIBUTES TO:
+─────────────────                 ─────────────────
+1 piece of content (e.g., a       → TikTok
+"yellow sauce reveal" video)      → Instagram Reels
+                                  → Facebook Reels
+                                  → YouTube Shorts
+                                  → GMB post (curated)
+                                  → Nextdoor (selective)
+                                  → Email newsletter (embedded)
+                                  → Meta ad creative (if it performs)
+                                  → Website (homepage feature)
+
+1 event (e.g., "Father's Day      → Eventbrite
+Catering Showcase")               → Facebook Event
+                                  → Luma
+                                  → GMB Post
+                                  → Nextdoor
+                                  → Email blast
+                                  → SMS announcement
+                                  → Instagram + TikTok teasers
+                                  → /events page on website
+
+1 review insight (e.g., "yellow   → Marketing campaign trigger
+sauce praised 8x this week")      → TikTok content idea
+                                  → GMB post
+                                  → Menu callout
+                                  → Email subject line
+                                  → Ad creative angle
