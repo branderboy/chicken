@@ -45,13 +45,13 @@
  .text-brand { color: var(--brand-primary); }
  
  h1, h2, h3, h4 { color: var(--text-dark); font-weight: 900; line-height: 1.2; }
- .section-title { font-size: clamp(28px, 4vw, 36px); margin-bottom: 20px; letter-spacing: -0.5px; }
+ .section-title { font-size: clamp(30px, 4.2vw, 40px); margin-bottom: 20px; letter-spacing: -0.5px; }
  
  /* HERO SECTION */
  .hero { padding: 60px 30px 50px; border-bottom: 4px solid var(--border-color); background: var(--bg-main); text-align: center; }
  .pre-headline { color: var(--brand-primary); font-weight: 800; font-size: 16px; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1.5px; }
  .main-headline { font-size: clamp(32px, 5vw, 52px); margin-bottom: 30px; letter-spacing: -1px; }
- .sub-headline { font-size: clamp(18px, 2.5vw, 22px); color: var(--text-body); font-weight: 500; margin-bottom: 40px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
+ .sub-headline { font-size: clamp(20px, 2.6vw, 26px); color: var(--text-body); font-weight: 500; margin-bottom: 40px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto; }
  
  /* BUTTONS */
  .cta-button { display: inline-block; width: 100%; max-width: 500px; background-color: var(--brand-primary); color: white; padding: 22px 20px; text-decoration: none; border-radius: 8px; box-shadow: 0 8px 0 var(--brand-primary-hover), 0 15px 20px rgba(234, 88, 12, 0.2); transition: all 0.1s; border: none; cursor: pointer; margin: 10px auto; text-align: center; }
@@ -75,8 +75,8 @@
  .audit-grid { display: grid; gap: 12px; }
  .audit-card { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; }
  .audit-icon { width: 20px; height: 20px; color: #6b7280; flex-shrink: 0; margin-top: 2px; }
- .audit-text { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
- .audit-text strong { display: block; color: var(--text-dark); font-size: 15px; margin-bottom: 4px; font-weight: 800; }
+ .audit-text { font-size: 16px; color: var(--text-muted); line-height: 1.5; }
+ .audit-text strong { display: block; color: var(--text-dark); font-size: 17px; margin-bottom: 4px; font-weight: 800; }
 
  /* MOCKUPS (NO IMAGES REQUIRED) */
  .pos-mockup { background: #ffffff; border-radius: 12px; padding: 20px; color: var(--text-dark); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.02); border: 1px solid var(--border-color); font-family: -apple-system, sans-serif; position: relative; }
@@ -121,9 +121,9 @@
  .sol-card { background: var(--bg-main); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px; transition: border-color 0.2s; }
  .sol-card:hover { border-color: var(--brand-primary); }
  .sol-num { width: 40px; height: 40px; background: var(--brand-primary); color: white; font-size: 20px; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 20px; }
- .sol-card h3 { font-size: 20px; margin-bottom: 12px; }
- .sol-card p { font-size: 15px; color: var(--text-muted); }
- .sol-card ul { margin-top: 15px; padding-left: 20px; font-size: 14px; color: var(--text-body); }
+ .sol-card h3 { font-size: 22px; margin-bottom: 12px; }
+ .sol-card p { font-size: 17px; color: var(--text-muted); }
+ .sol-card ul { margin-top: 15px; padding-left: 20px; font-size: 16px; color: var(--text-body); }
  .sol-card ul li { margin-bottom: 6px; }
 
  /* TIMELINE (DELIVERABLES & RESULTS) */
@@ -139,7 +139,7 @@
  /* WHO THIS IS FOR */
  .check-list { list-style: none; margin-top: 30px; display: grid; gap: 15px; }
  @media (min-width: 600px) { .check-list { grid-template-columns: 1fr 1fr; } }
- .check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; font-weight: 600; }
+ .check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 18px; font-weight: 600; }
  .check-list svg { width: 24px; height: 24px; color: var(--green-success); flex-shrink: 0; }
 
  /* PRICING / OFFER */
@@ -164,9 +164,9 @@
  /* FAQ */
  .faq-item { border-bottom: 1px solid var(--border-color); padding: 20px 0; }
  .faq-item:last-child { border-bottom: none; }
- .faq-q { font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; cursor: pointer; display: flex; gap: 10px; }
+ .faq-q { font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; cursor: pointer; display: flex; gap: 10px; }
  .faq-q::before { content: 'Q:'; color: var(--brand-primary); }
- .faq-a { font-size: 16px; color: var(--text-body); padding-left: 30px; display: flex; gap: 10px; }
+ .faq-a { font-size: 18px; color: var(--text-body); padding-left: 30px; display: flex; gap: 10px; }
  .faq-a::before { content: 'A:'; color: var(--text-muted); font-weight: 800; }
 
  /* FORM */
@@ -212,6 +212,38 @@
  <!-- HERO SECTION -->
  <div class="hero">
  <div class="pre-headline">For Chicho’s, 6300-2 Annapolis Rd, Hyattsville</div>
+
+ <!-- GMB / GOOGLE MAPS PREVIEW -->
+ <div style="max-width: 760px; margin: 0 auto 30px; border-radius: 12px; overflow: hidden; border: 2px solid var(--border-color); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.12); background: var(--bg-main);">
+ <div style="background: var(--bg-alt); padding: 14px 20px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+ <div style="display: flex; align-items: center; gap: 10px;">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+ <strong style="font-size: 17px; color: var(--text-dark);">Your Current Google Listing</strong>
+ </div>
+ <span style="font-size: 13px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Live from Google Maps</span>
+ </div>
+ <iframe
+ src="https://maps.google.com/maps?q=Chicho%27s%20Peruvian%20Charcoal%20Chicken%2C%206300%20Annapolis%20Rd%2C%20Hyattsville%2C%20MD&output=embed"
+ width="100%" height="320" style="border:0; display:block;"
+ loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Chicho's Peruvian Charcoal Chicken on Google Maps"></iframe>
+ <div style="padding: 14px 20px; font-size: 15px; color: var(--text-muted); background: var(--bg-alt); border-top: 1px solid var(--border-color);">This is what people see right now. We start by making this listing actually work for you.</div>
+ </div>
+
+ <!-- YOUR CURRENT STACK -->
+ <div style="max-width: 760px; margin: 0 auto 30px; padding: 18px 20px; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-main);">
+ <div style="font-size: 12px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; text-align: center; margin-bottom: 14px;">Your Current Stack, We Plug Right In</div>
+ <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; align-items: center;">
+ <div style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; background: #FF4D00; color: white; border-radius: 8px; font-weight: 900; font-size: 18px; letter-spacing: -0.5px;">
+ <span style="display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; background: white; color: #FF4D00; border-radius: 6px; font-weight: 900; font-size: 16px;">T</span>
+ Toast POS
+ </div>
+ <div style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; background: var(--bg-alt); color: var(--text-dark); border: 1px solid var(--border-color); border-radius: 8px; font-weight: 800; font-size: 17px;">
+ <span style="display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; border-radius: 50%; font-weight: 900; font-size: 18px; background: linear-gradient(135deg, #4285F4 0%, #4285F4 25%, #EA4335 25%, #EA4335 50%, #FBBC05 50%, #FBBC05 75%, #34A853 75%); color: white;">G</span>
+ Google Business + Maps
+ </div>
+ </div>
+ </div>
+
  <h1 class="main-headline">Most restaurants your size are losing <span class="text-brand">$6k to $20k a month</span> from slow days, missed catering, and bad listings.</h1>
  <p class="sub-headline">I built a system that shows you exactly where the money is leaking, then tells your team what to do about it every day. This isn’t marketing. It’s decision-making infrastructure: your Toast, Google, reviews, ads, and customer list pulled into one screen, with a fresh playbook every week and a short list of reminders every morning.</p>
 
@@ -386,23 +418,23 @@
  </div>
  <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 18px; font-style: italic;">Toast is good at the “what.” It’s blind to the “why” and the “what’s next.”</p>
  <ul style="list-style: none; padding: 0;">
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Total sales for the day, week, and month</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Top-selling items and combos</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Labor cost vs. sales</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Discounts, voids, and tips</li>
- <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Online order totals from Toast’s ordering tool</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Total sales for the day, week, and month</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Top-selling items and combos</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Labor cost vs. sales</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Discounts, voids, and tips</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 17px;"><span style="position: absolute; left: 0; color: var(--text-muted); font-weight: 900;">✓</span> Online order totals from Toast’s ordering tool</li>
  </ul>
 
  <h4 style="margin-top: 28px; font-size: 16px; color: var(--red-alert); text-transform: uppercase; letter-spacing: 0.5px;">What Toast Can’t Help You With</h4>
  <ul style="list-style: none; padding: 0; margin-top: 12px;">
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Why Tuesday is slow, or what to do about it</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What people search on Google before they walk in</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Which reviews are hurting you and which are helping</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who asked about catering and never got a callback</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Whether your DoorDash and Uber Eats prices are leaking money</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to post on Instagram or TikTok this week</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who your repeat customers are and how to bring them back</li>
- <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to actually do tomorrow to make more money</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Why Tuesday is slow, or what to do about it</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What people search on Google before they walk in</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Which reviews are hurting you and which are helping</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who asked about catering and never got a callback</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Whether your DoorDash and Uber Eats prices are leaking money</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to post on Instagram or TikTok this week</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> Who your repeat customers are and how to bring them back</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 17px;"><span style="position: absolute; left: 0; color: var(--red-alert); font-weight: 900;">✕</span> What to actually do tomorrow to make more money</li>
  </ul>
  </div>
 
@@ -415,21 +447,21 @@
 
  <h4 style="font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">The Full Picture</h4>
  <ul style="list-style: none; padding: 0; margin-top: 12px;">
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Toast sales <strong>plus</strong> Google search views, ad clicks, review scores, and food-app numbers, all in one place</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The exact words people type into Google before finding (or missing) you</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A live customer list, every email, phone, and birthday tied back to Toast</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A catering follow-up list so no order slips through</li>
- <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A weekly forecast: how busy each day will be, before it happens</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Toast sales <strong>plus</strong> Google search views, ad clicks, review scores, and food-app numbers, all in one place</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The exact words people type into Google before finding (or missing) you</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A live customer list, every email, phone, and birthday tied back to Toast</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A catering follow-up list so no order slips through</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A weekly forecast: how busy each day will be, before it happens</li>
  </ul>
 
  <h4 style="margin-top: 28px; font-size: 16px; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.5px;">Real Recommendations You Can Use</h4>
  <ul style="list-style: none; padding: 0; margin-top: 12px;">
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Tuesday looks 30% slow, send this text to last month’s pickup customers by 11 AM.”</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “4 people searched ‘catering near me’ in Hyattsville this week, call these 4.”</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Your DoorDash chicken plate is priced $2 lower than dine-in, raise it Monday.”</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Post the rotisserie video at 4:45 PM today, that’s when your buyers are scrolling.”</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Maria left a 5-star review, reply now, ask her to bring a friend Friday.”</li>
- <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Saturday will be busy, prep 22% more chicken and add one extra cashier.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Tuesday looks 30% slow, send this text to last month’s pickup customers by 11 AM.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “4 people searched ‘catering near me’ in Hyattsville this week, call these 4.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Your DoorDash chicken plate is priced $2 lower than dine-in, raise it Monday.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Post the rotisserie video at 4:45 PM today, that’s when your buyers are scrolling.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Maria left a 5-star review, reply now, ask her to bring a friend Friday.”</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> “Saturday will be busy, prep 22% more chicken and add one extra cashier.”</li>
  </ul>
  </div>
  </div>
@@ -441,7 +473,7 @@
  <div class="section bg-dark">
  <div style="text-align: center; margin-bottom: 10px;"><span style="display: inline-block; background: var(--brand-primary); color: white; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 99px;">My Framework, Built Over 20+ Years</span></div>
  <h2 class="section-title text-center" style="margin-top: 14px;">My 12-Asset Framework<br><span class="text-brand">Every Asset Feeds One Dashboard.</span></h2>
- <p class="text-center" style="font-size: 17px; max-width: 780px; margin: 0 auto 40px; color: var(--text-body);">This is my plan. Every restaurant has 12 places where data and demand live. Most owners run them like 12 separate apps. I connect all 12 into one view. Each one tells the dashboard what to track, and the dashboard tells the team what to do next.</p>
+ <p class="text-center" style="font-size: 19px; max-width: 780px; margin: 0 auto 40px; color: var(--text-body);">This is my plan. Every restaurant has 12 places where data and demand live. Most owners run them like 12 separate apps. I connect all 12 into one view. Each one tells the dashboard what to track, and the dashboard tells the team what to do next.</p>
 
  <div style="display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 980px; margin: 0 auto;" class="ways-grid">
 
@@ -450,7 +482,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">POS (Toast)</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The truth layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Every transaction lives here. We pull daily sales by daypart, top sellers, channel mix (dine-in, takeout, direct, DoorDash, Uber, Grubhub), AOV, and email captures. The dashboard turns this into next-day forecasts, slow-daypart alerts, and triggers that fire SMS, ads, or menu reviews.</p>
+ <p style="font-size: 17px; color: var(--text-body);">Every transaction lives here. We pull daily sales by daypart, top sellers, channel mix (dine-in, takeout, direct, DoorDash, Uber, Grubhub), AOV, and email captures. The dashboard turns this into next-day forecasts, slow-daypart alerts, and triggers that fire SMS, ads, or menu reviews.</p>
  </div>
  </div>
 
@@ -459,7 +491,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Website (Search Console + GA4)</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The visibility layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Tells us who finds you, what they search, and what they do once they land. Tracks rankings, click-through, conversions (orders, calls, directions, catering forms), and indexing health. Spots low-CTR pages, broken indexing, and new keyword opportunities.</p>
+ <p style="font-size: 17px; color: var(--text-body);">Tells us who finds you, what they search, and what they do once they land. Tracks rankings, click-through, conversions (orders, calls, directions, catering forms), and indexing health. Spots low-CTR pages, broken indexing, and new keyword opportunities.</p>
  </div>
  </div>
 
@@ -468,7 +500,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">GMB + TripAdvisor + Bing Local</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The local discovery layer</p>
- <p style="font-size: 14px; color: var(--text-body);">The three search engines that move local diners. We pull direction requests, calls, profile views, popular times, top queries, photos, Q&A, and reviews. The dashboard turns review pings into a response queue (1-2 star = today, 3 star = 48 hours, 4-5 star = within 5 days) and flags missed search demand like "catering near me."</p>
+ <p style="font-size: 17px; color: var(--text-body);">The three search engines that move local diners. We pull direction requests, calls, profile views, popular times, top queries, photos, Q&A, and reviews. The dashboard turns review pings into a response queue (1-2 star = today, 3 star = 48 hours, 4-5 star = within 5 days) and flags missed search demand like "catering near me."</p>
  </div>
  </div>
 
@@ -477,7 +509,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">NAP Reconciliation</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The data integrity layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Your name, address, and phone listed across 30+ directories. Nobody thinks about it until it's killing your rankings. We lock in one official record, fix mismatches, kill duplicates, and add the schema markup on your website so Google trusts you.</p>
+ <p style="font-size: 17px; color: var(--text-body);">Your name, address, and phone listed across 30+ directories. Nobody thinks about it until it's killing your rankings. We lock in one official record, fix mismatches, kill duplicates, and add the schema markup on your website so Google trusts you.</p>
  </div>
  </div>
 
@@ -486,8 +518,8 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Social + Nextdoor</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The awareness layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Where you build brand and reach people who aren't searching yet. We track post performance, top content, and Nextdoor reach by neighborhood. We don't shoot your videos. We coach you on what to film using the patterns that already win in food search:</p>
- <ul style="font-size: 13px; color: var(--text-body); margin-top: 10px; padding-left: 18px; columns: 2; gap: 16px;">
+ <p style="font-size: 17px; color: var(--text-body);">Where you build brand and reach people who aren't searching yet. We track post performance, top content, and Nextdoor reach by neighborhood. We don't shoot your videos. We coach you on what to film using the patterns that already win in food search:</p>
+ <ul style="font-size: 15px; color: var(--text-body); margin-top: 10px; padding-left: 18px; columns: 2; gap: 16px;">
  <li>"my review of [place]"</li>
  <li>"i tried [food/place]"</li>
  <li>"honest review of [place]"</li>
@@ -502,9 +534,9 @@
  <li>"must-try [food] in [area]"</li>
  <li>"stop scrolling if you live in [area]"</li>
  </ul>
- <p style="font-size: 13px; color: var(--text-body); margin-top: 10px; font-style: italic;">One piece of content gets distributed: TikTok, Reels, Facebook Reels, YouTube Shorts, GMB posts, Nextdoor (selective), email newsletter, Meta ads (if it performs).</p>
+ <p style="font-size: 15px; color: var(--text-body); margin-top: 10px; font-style: italic;">One piece of content gets distributed: TikTok, Reels, Facebook Reels, YouTube Shorts, GMB posts, Nextdoor (selective), email newsletter, Meta ads (if it performs).</p>
  <div style="margin-top: 14px; padding: 14px; background: #fff7ed; border-left: 3px solid var(--brand-primary); border-radius: 6px;">
- <p style="font-size: 13px; color: var(--text-dark); font-weight: 800; margin-bottom: 4px;">Local Audience Scrape</p>
+ <p style="font-size: 15px; color: var(--text-dark); font-weight: 800; margin-bottom: 4px;">Local Audience Scrape</p>
  <p style="font-size: 13px; color: var(--text-body);">We also pull lists of people who like and engage with food pages in your area (similar restaurants, food bloggers, neighborhood foodies) and build them into Meta custom audiences. Your ads stop blasting strangers and start hitting people who already love this kind of food and live close enough to drive over.</p>
  </div>
  </div>
@@ -515,8 +547,8 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Email</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The owned audience layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Your highest-margin channel. Every send costs almost zero. We track list size, opens, clicks, and revenue per send. Automations running in the background:</p>
- <ul style="font-size: 13px; color: var(--text-body); margin-top: 8px; padding-left: 18px;">
+ <p style="font-size: 17px; color: var(--text-body);">Your highest-margin channel. Every send costs almost zero. We track list size, opens, clicks, and revenue per send. Automations running in the background:</p>
+ <ul style="font-size: 15px; color: var(--text-body); margin-top: 8px; padding-left: 18px;">
  <li>Welcome series (3 emails over 14 days)</li>
  <li>Post-purchase thank-you + review request</li>
  <li>Birthday week free dessert</li>
@@ -533,7 +565,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Rewards Platform</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The retention layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Turns one-time customers into regulars. Built on Toast Loyalty as the foundation, optionally layered with Marsello, Thanx, or Spendgo. Tracks member AOV vs non-member, visit frequency, point redemptions, and inactive members so the dashboard can fire win-back triggers.</p>
+ <p style="font-size: 17px; color: var(--text-body);">Turns one-time customers into regulars. Built on Toast Loyalty as the foundation, optionally layered with Marsello, Thanx, or Spendgo. Tracks member AOV vs non-member, visit frequency, point redemptions, and inactive members so the dashboard can fire win-back triggers.</p>
  </div>
  </div>
 
@@ -542,7 +574,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Food Apps (DoorDash, Uber Eats, Grubhub)</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The third-party demand layer</p>
- <p style="font-size: 14px; color: var(--text-body);">High volume, high cost. Needs active management. We compare sales, AOV, conversion, and sponsored listing ROAS across platforms, then reallocate spend to whatever's winning. Underperforming items get photo refreshes, rewrites, or get killed. Every order goes out with an insert pushing the customer to your direct ordering link.</p>
+ <p style="font-size: 17px; color: var(--text-body);">High volume, high cost. Needs active management. We compare sales, AOV, conversion, and sponsored listing ROAS across platforms, then reallocate spend to whatever's winning. Underperforming items get photo refreshes, rewrites, or get killed. Every order goes out with an insert pushing the customer to your direct ordering link.</p>
  </div>
  </div>
 
@@ -551,7 +583,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Reviews Intel Dashboard</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The voice-of-customer layer</p>
- <p style="font-size: 14px; color: var(--text-body);">All reviews from Google, Yelp, TripAdvisor, DoorDash, Uber Eats, Grubhub, Facebook, Nextdoor, and Toast in one inbox (we use Birdeye, Podium, Reputation, or a simple sheet if budget is tight). Each review gets auto-tagged by theme and sentiment. The dashboard flags patterns: if "wait time" shows up 4 times in a week, you get a throughput audit. If "yellow sauce" gets praised 8 times, that becomes the next TikTok, GMB post, and ad.</p>
+ <p style="font-size: 17px; color: var(--text-body);">All reviews from Google, Yelp, TripAdvisor, DoorDash, Uber Eats, Grubhub, Facebook, Nextdoor, and Toast in one inbox (we use Birdeye, Podium, Reputation, or a simple sheet if budget is tight). Each review gets auto-tagged by theme and sentiment. The dashboard flags patterns: if "wait time" shows up 4 times in a week, you get a throughput audit. If "yellow sauce" gets praised 8 times, that becomes the next TikTok, GMB post, and ad.</p>
  </div>
  </div>
 
@@ -560,9 +592,9 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Happy Hour</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The customer appreciation layer (capture trigger)</p>
- <p style="font-size: 14px; color: var(--text-body);">A customer appreciation event run during your slow times. Picks up the hours and days the dashboard shows are quiet, and turns them into reasons people choose you. Promoted through Eventbrite, Facebook Events, Luma, GMB Posts, Nextdoor, your email and SMS list, Instagram and TikTok teasers, your /events page, and in-store signage. RSVP captures phone and email at signup. The dashboard tracks attendance, repeat visits, and captures per event so we know which formats are worth running again.</p>
+ <p style="font-size: 17px; color: var(--text-body);">A customer appreciation event run during your slow times. Picks up the hours and days the dashboard shows are quiet, and turns them into reasons people choose you. Promoted through Eventbrite, Facebook Events, Luma, GMB Posts, Nextdoor, your email and SMS list, Instagram and TikTok teasers, your /events page, and in-store signage. RSVP captures phone and email at signup. The dashboard tracks attendance, repeat visits, and captures per event so we know which formats are worth running again.</p>
  <div style="margin-top: 14px; padding: 14px; background: #fff7ed; border-left: 3px solid var(--brand-primary); border-radius: 6px;">
- <p style="font-size: 13px; color: var(--text-dark); font-weight: 800; margin-bottom: 4px;">Featured Quarterly Event: Catering Showcase</p>
+ <p style="font-size: 15px; color: var(--text-dark); font-weight: 800; margin-bottom: 4px;">Featured Quarterly Event: Catering Showcase</p>
  <p style="font-size: 13px; color: var(--text-body);">An invite-only tasting for businesses, churches, schools, and HOAs within 5 miles. Catered samples, menu booklet, business cards. One showcase typically books 5 to 15 recurring catering accounts. Highest-ROI event we run.</p>
  </div>
  </div>
@@ -573,7 +605,7 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Monthly Giveaway (Text-to-Win)</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The capture trigger layer</p>
- <p style="font-size: 14px; color: var(--text-body);">A recurring monthly drawing (free family meal, free catering tray, gift card, branded merch) that gives people a real reason to hand over their phone and email today instead of "someday." Promoted on table tents, receipts, the front window, every food-app order insert, every social post, and every Meta ad we run. Every entry feeds straight into the customer list and kicks off the welcome series.</p>
+ <p style="font-size: 17px; color: var(--text-body);">A recurring monthly drawing (free family meal, free catering tray, gift card, branded merch) that gives people a real reason to hand over their phone and email today instead of "someday." Promoted on table tents, receipts, the front window, every food-app order insert, every social post, and every Meta ad we run. Every entry feeds straight into the customer list and kicks off the welcome series.</p>
  </div>
  </div>
 
@@ -582,13 +614,13 @@
  <div>
  <h3 style="font-size: 18px; margin-bottom: 4px;">Facebook Geofence Ads</h3>
  <p style="font-size: 16px; color: var(--brand-primary); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">The activation layer</p>
- <p style="font-size: 14px; color: var(--text-body);">Facebook and Instagram ads drawn around a tight radius (your delivery zone, nearby office parks, apartment complexes, churches, schools, the mall). People physically inside that fence see your ad with an offer that activates them to come in today, "free side this week," "20% off until Sunday," "show this ad at the register." The dashboard tracks foot traffic and ROAS per fence so we know which zones are worth doubling down on.</p>
+ <p style="font-size: 17px; color: var(--text-body);">Facebook and Instagram ads drawn around a tight radius (your delivery zone, nearby office parks, apartment complexes, churches, schools, the mall). People physically inside that fence see your ad with an offer that activates them to come in today, "free side this week," "20% off until Sunday," "show this ad at the register." The dashboard tracks foot traffic and ROAS per fence so we know which zones are worth doubling down on.</p>
  </div>
  </div>
 
  </div>
 
- <p class="text-center" style="margin-top: 40px; font-size: 17px; color: #d6d3d1; max-width: 760px; margin-left: auto; margin-right: auto;">On the call, I'll walk through your version of these 12 assets, which ones are working, which are leaking, and which 4 or 5 will move the needle for Chicho's first.</p>
+ <p class="text-center" style="margin-top: 40px; font-size: 19px; color: #d6d3d1; max-width: 760px; margin-left: auto; margin-right: auto;">On the call, I'll walk through your version of these 12 assets, which ones are working, which are leaking, and which 4 or 5 will move the needle for Chicho's first.</p>
  </div>
 
  <style>
@@ -600,16 +632,16 @@
  <!-- SECOND LOCATION SECTION -->
  <div class="section bg-alt">
  <h2 class="section-title text-center">Built Once Here. Ready for Location #2.</h2>
- <p class="text-center" style="font-size: 17px; max-width: 720px; margin: 0 auto 30px;">Since you’re opening another spot, the work we do at Hyattsville does double duty. We use this store to figure out what works: the menu, the playbook, the marketing, the staffing. So your new spot opens with a plan that’s already been tested, not from scratch.</p>
+ <p class="text-center" style="font-size: 19px; max-width: 720px; margin: 0 auto 30px;">Since you’re opening another spot, the work we do at Hyattsville does double duty. We use this store to figure out what works: the menu, the playbook, the marketing, the staffing. So your new spot opens with a plan that’s already been tested, not from scratch.</p>
 
  <div style="max-width: 720px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px;">
  <h4 style="font-size: 14px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px;">What carries over to the new location</h4>
  <ul style="list-style: none; padding: 0;">
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The same weekly playbook and daily reminders, ready to run</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A forecast built on a full year of your real sales data</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Ads, posts, and texts we already know bring in customers</li>
- <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Your customer list, ready to invite to the new opening</li>
- <li style="padding: 10px 0 10px 28px; position: relative; font-size: 15px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> One dashboard showing both locations side by side</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> The same weekly playbook and daily reminders, ready to run</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> A forecast built on a full year of your real sales data</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Ads, posts, and texts we already know bring in customers</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--border-color); font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> Your customer list, ready to invite to the new opening</li>
+ <li style="padding: 10px 0 10px 28px; position: relative; font-size: 17px;"><span style="position: absolute; left: 0; color: var(--green-success); font-weight: 900;">✓</span> One dashboard showing both locations side by side</li>
  </ul>
  </div>
  </div>
